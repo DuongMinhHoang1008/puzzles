@@ -42,6 +42,6 @@ This captures real boards using seed `0`, writes reproducibility fixtures and th
 
 Remote default branch was verified as **master**. Workflows check builds on PRs/master, and prepare Pages on master or manual dispatch. Actions are pinned to verified release SHAs. `PAGES_BASE` defaults to `/puzzles/`; deployment derives it from the repository name. Hash routes preserve refresh and encoded Game IDs.
 
-Before deployment, finish the remaining release gates and update `release-status.json` with evidence. The owner must select **Settings → Pages → Source → GitHub Actions**. No push or live deployment was performed during implementation.
+Pages currently publishes a preview after the full Linux build and browser checks pass. `release-status.json` explicitly permits preview deployment while preserving incomplete release QA; the strict release check still fails until all release gates pass. The owner must select **Settings → Pages → Source → GitHub Actions**. Deployment success must be verified in Actions and at the public URL.
 
 Puzzle Studio is an independent frontend, not an official Simon Tatham product. Original engine/manual copyrights and MIT notices are preserved in `public/licenses/LICENCE`. UI uses system fonts; short opt-in sounds are synthesized in code, with no third-party audio assets.
