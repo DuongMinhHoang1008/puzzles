@@ -250,11 +250,10 @@ test("completed Net is celebrated once and remains so after Undo/Redo/reload", a
 test("large number boards accept letter n without creating a new puzzle", async ({
   page,
 }) => {
-  await page.goto("./#/play/unequal");
-  await page.getByRole("button", { name: "Customise", exact: true }).click();
-  await page.getByLabel("Size (s*s)", { exact: true }).fill("25");
-  await page.getByRole("button", { name: "Apply", exact: true }).click();
-  await expect(page.locator("dialog")).toHaveCount(0);
+  // Test keyboard symbols independently of expensive random 25x25 generation.
+  const gameId = `25:${Array(625).fill("0").join(",")}`;
+  await page.goto(`./#/play/unequal?game=${encodeURIComponent(gameId)}`);
+  await expect(page.locator('.board-wrap > canvas[aria-label="Unequal"]')).toBeVisible();
   await expect
     .poll(async () =>
       field((await saved(page, "unequal"))?.text || "", "PARAMS"),
