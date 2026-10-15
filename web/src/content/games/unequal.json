@@ -1,0 +1,22 @@
+{
+  "name": "Unequal",
+  "en": {
+    "goal": "Use each digit once per row and column while satisfying every inequality between adjacent cells.",
+    "input": "Select a cell, then type a digit. Right-click for pencil or alternate selection. Use Backspace to clear and arrow keys to navigate.",
+    "rules": [
+      "Every row and column contains each digit from 1 to the grid size once. There are no block constraints.",
+      "In Unequal mode, respect the greater-than and less-than signs between neighbouring cells.",
+      "In Adjacent mode, bars indicate consecutive numbers: their difference is one. Neighbours without a bar must not be consecutive."
+    ]
+  },
+  "vi": {
+    "goal": "Mỗi hàng và cột có mỗi chữ số đúng một lần, đồng thời thỏa mọi bất đẳng thức giữa các ô kề.",
+    "input": "Chọn ô rồi nhập số. Nhấn chuột phải để chọn ghi chú hoặc thao tác phụ. Backspace để xóa, phím mũi tên để di chuyển.",
+    "rules": [
+      "Mỗi hàng và cột chứa mỗi số từ 1 đến kích thước bàn đúng một lần. Không có ràng buộc khối.",
+      "Ở chế độ bất đẳng thức, thỏa dấu lớn hơn và nhỏ hơn giữa các ô kề.",
+      "Ở chế độ kề, vạch chỉ hai số liên tiếp: chênh lệch bằng 1. Hai ô kề không có vạch không được chứa số liên tiếp."
+    ]
+  },
+  "source": "puzzles.but: unequal"
+}

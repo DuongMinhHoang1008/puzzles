@@ -1,0 +1,22 @@
+{
+  "name": "Tracks",
+  "en": {
+    "goal": "Draw a continuous track from A to B through the given pieces. Edge clues count occupied cells in each row and column.",
+    "input": "Click a cell to cycle through track piece options. The track must form a continuous path from A to B using only the given pieces. Edge clues count how many track cells are in each row and column.",
+    "rules": [
+      "Build a continuous track joining A to B and include all the given rail pieces.",
+      "Each occupied cell has a straight or a 90-degree rail. Tracks cannot branch, cross themselves or form a separate closed loop.",
+      "Top and right clues count occupied track cells in their respective columns and rows. Secondary marks exclude cells or edges."
+    ]
+  },
+  "vi": {
+    "goal": "Vẽ đường tàu liên tục từ A tới B qua các đoạn đã cho. Số ngoài bàn đếm ô có đường trong mỗi hàng và cột.",
+    "input": "Nhấn ô để chuyển qua các loại đoạn đường. Đường phải nối liền từ A tới B dùng các đoạn đã cho. Số ngoài bàn đếm ô có đường trong mỗi hàng và cột.",
+    "rules": [
+      "Dựng đường tàu liên tục nối A đến B, đi qua mọi đoạn ray đã cho.",
+      "Mỗi ô có đường chứa ray thẳng hoặc góc 90 độ. Không được phân nhánh, tự cắt hoặc tạo vòng kín riêng.",
+      "Gợi ý trên và phải đếm ô có ray trong cột và hàng tương ứng. Dấu phụ loại ô hoặc cạnh."
+    ]
+  },
+  "source": "puzzles.but: tracks"
+}

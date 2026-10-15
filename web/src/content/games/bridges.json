@@ -1,0 +1,22 @@
+{
+  "name": "Bridges",
+  "en": {
+    "goal": "Join islands with one or two bridges. Each number is its bridge count; connect every island without crossing bridges.",
+    "input": "Click on an island, then click another island to draw a bridge. Click again to add a second bridge. Right click (Secondary) on a bridge to remove it. Drag between islands to draw bridges quickly.",
+    "rules": [
+      "Bridges join islands horizontally or vertically and cannot cross bridges or pass through other islands.",
+      "Each island’s number counts all bridges ending there. The default maximum is two parallel bridges per pair of islands.",
+      "All islands must form one connected network. Custom settings may change the bridge limit or forbid loops."
+    ]
+  },
+  "vi": {
+    "goal": "Nối các đảo bằng một hoặc hai cầu. Số trên đảo là tổng cầu; mọi đảo phải liên thông, cầu không giao nhau.",
+    "input": "Nhấn một đảo, rồi nhấn đảo khác để vẽ cầu. Nhấn thêm lần nữa để thêm cầu thứ hai. Nhấn phải (Thao tác phụ) vào cầu để xóa. Kéo giữa hai đảo để vẽ cầu nhanh.",
+    "rules": [
+      "Cầu nối đảo theo hàng hoặc cột, không cắt cầu khác và không đi xuyên đảo.",
+      "Số trên đảo đếm mọi cầu kết thúc tại đảo. Mặc định mỗi cặp đảo có tối đa hai cầu song song.",
+      "Mọi đảo phải thuộc một mạng liên thông. Cấu hình tùy chỉnh có thể đổi giới hạn cầu hoặc cấm vòng kín."
+    ]
+  },
+  "source": "puzzles.but: bridges"
+}

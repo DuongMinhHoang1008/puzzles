@@ -3071,6 +3071,15 @@ static void game_redraw(drawing *dr, game_drawstate *ds,
      */
     active = compute_active(state, ui->cx, ui->cy);
     loops = compute_loops(state);
+#ifdef __EMSCRIPTEN__
+    /* Semantic feedback uses connectivity from the source, in display coordinates. */
+    extern void js_semantic_cell(int, int, int, int, int, int);
+    for (x = 0; x < ds->width; x++)
+        for (y = 0; y < ds->height; y++)
+            js_semantic_cell(x + y * ds->width,
+                WINDOW_OFFSET + x * TILE_SIZE, WINDOW_OFFSET + y * TILE_SIZE,
+                TILE_SIZE, TILE_SIZE, index(state, active, GX(x), GY(y)) ? 1 : 0);
+#endif
 
     for (x = 0; x < ds->width; x++)
         for (y = 0; y < ds->height; y++) {

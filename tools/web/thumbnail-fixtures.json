@@ -1,0 +1,116 @@
+{
+  "blackbox": {
+    "seed": "w8h8m5M5#0"
+  },
+  "bridges": {
+    "seed": "7x7i30e10m2d0#0"
+  },
+  "cube": {
+    "seed": "c4x4#0"
+  },
+  "dominosa": {
+    "seed": "6#0"
+  },
+  "fifteen": {
+    "seed": "4x4#0"
+  },
+  "filling": {
+    "seed": "13x9#0"
+  },
+  "flip": {
+    "seed": "5x5c#0"
+  },
+  "flood": {
+    "seed": "12x12c6m5#0"
+  },
+  "galaxies": {
+    "seed": "7x7dn#0"
+  },
+  "guess": {
+    "seed": "c6p4g10Bm#0"
+  },
+  "inertia": {
+    "seed": "10x8#0"
+  },
+  "keen": {
+    "seed": "6dn#0"
+  },
+  "lightup": {
+    "seed": "7x7b20s4d0#0"
+  },
+  "loopy": {
+    "seed": "7x7t0de#0"
+  },
+  "magnets": {
+    "seed": "6x5dtS#0"
+  },
+  "map": {
+    "seed": "20x15n30dn#0"
+  },
+  "mines": {
+    "seed": "9x9n10#0"
+  },
+  "net": {
+    "seed": "5x5#0"
+  },
+  "netslide": {
+    "seed": "3x3b1#0"
+  },
+  "pattern": {
+    "seed": "15x15#0"
+  },
+  "pearl": {
+    "seed": "8x8dt#0"
+  },
+  "pegs": {
+    "seed": "7x7cross#0"
+  },
+  "range": {
+    "seed": "9x6#0"
+  },
+  "rect": {
+    "seed": "7x7#0"
+  },
+  "samegame": {
+    "seed": "5x5c3s2#0"
+  },
+  "signpost": {
+    "seed": "4x4c#0"
+  },
+  "singles": {
+    "seed": "5x5de#0"
+  },
+  "sixteen": {
+    "seed": "4x4#0"
+  },
+  "slant": {
+    "seed": "8x8de#0"
+  },
+  "solo": {
+    "seed": "3x3#0"
+  },
+  "tents": {
+    "seed": "8x8de#0"
+  },
+  "towers": {
+    "seed": "5de#0"
+  },
+  "tracks": {
+    "seed": "8x8dt#0"
+  },
+  "twiddle": {
+    "seed": "3x3n2#0"
+  },
+  "undead": {
+    "seed": "4x4dn#0"
+  },
+  "unequal": {
+    "seed": "4de#0"
+  },
+  "unruly": {
+    "seed": "8x8de#0"
+  },
+  "untangle": {
+    "seed": "10#0"
+  }
+}

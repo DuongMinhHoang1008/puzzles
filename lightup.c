@@ -2188,6 +2188,14 @@ static void game_redraw(drawing *dr, game_drawstate *ds,
     for (x = 0; x < ds->w; x++) {
         for (y = 0; y < ds->h; y++) {
             unsigned int ds_flags = tile_flags(ds, state, ui, x, y, flashing);
+#ifdef __EMSCRIPTEN__
+            extern void js_semantic_cell(int, int, int, int, int, int);
+            js_semantic_cell(x + y * ds->w, COORD(x), COORD(y), TILE_SIZE, TILE_SIZE,
+                (GRID(state, flags, x, y) & F_BLACK) ? -1 :
+                ((GRID(state, lights, x, y) > 0 ? 1 : 0) |
+                 (GRID(state, flags, x, y) & F_LIGHT ? 2 : 0) |
+                 ((GRID(state, flags, x, y) & F_LIGHT) && GRID(state, lights, x, y) > 1 ? 4 : 0)));
+#endif
             if (ds_flags != GRID(ds, flags, x, y)) {
                 GRID(ds, flags, x, y) = ds_flags;
                 tile_redraw(dr, ds, state, x, y);

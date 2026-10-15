@@ -1,0 +1,22 @@
+{
+  "name": "Mines",
+  "en": {
+    "goal": "Reveal all safe cells. A number counts neighbouring mines; mark suspected mines with secondary input.",
+    "input": "Left click reveals a cell. Numbers show adjacent mines. Right click (Secondary) marks a cell as containing a mine. On larger grids, Q marks a flag and E erases a mine. Space or 0 clears a flag.",
+    "rules": [
+      "Reveal every cell that contains no mine. Numbers count mines in the eight surrounding cells, including diagonals.",
+      "Opening a mine loses the game. Flags are deductions and do not make a mine safe to open.",
+      "When a revealed number has the correct number of flagged neighbours, its chord action opens the remaining neighbours. Incorrect flags can therefore expose a mine."
+    ]
+  },
+  "vi": {
+    "goal": "Mở mọi ô an toàn. Số đếm mìn trong các ô xung quanh; dùng thao tác phụ để đánh dấu mìn.",
+    "input": "Nhấn trái mở ô. Số cho biết mìn kề xung quanh. Nhấn phải (Thao tác phụ) đánh dấu ô có mìn. Bàn lớn dùng Q để cắm cờ và E để xóa cờ. Space hoặc 0 xóa cờ.",
+    "rules": [
+      "Mở mọi ô không có mìn. Số đếm mìn trong tám ô xung quanh, kể cả đường chéo.",
+      "Mở mìn sẽ thua. Cờ chỉ là suy luận và không làm ô mìn trở nên an toàn.",
+      "Khi ô số có đủ số cờ kề bằng nó, thao tác mở quanh sẽ mở các ô còn lại. Vì vậy cờ sai có thể làm mở trúng mìn."
+    ]
+  },
+  "source": "puzzles.but: mines"
+}

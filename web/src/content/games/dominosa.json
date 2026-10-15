@@ -1,0 +1,22 @@
+{
+  "name": "Dominosa",
+  "en": {
+    "goal": "Partition the numbers into dominoes so each unordered pair appears exactly once.",
+    "input": "Click two adjacent numbers to draw a domino between them. Right click (Secondary) draws a separator line. The game shows impossible pairs and which pairs are not yet placed.",
+    "rules": [
+      "Each domino covers exactly two horizontally or vertically adjacent squares. Cover every square once.",
+      "Use every unordered pair from zero to the selected maximum exactly once, including doubles. Reversing a pair does not make a new domino.",
+      "Place a divider between neighbouring numbers to join them as a domino. Secondary marks record edges that cannot be joins."
+    ]
+  },
+  "vi": {
+    "goal": "Ghép các số thành domino sao cho mỗi cặp số không phân biệt thứ tự xuất hiện đúng một lần.",
+    "input": "Nhấn hai số kề nhau để vẽ domino giữa chúng. Nhấn phải (Thao tác phụ) vẽ đường ngăn cách. Game hiển thị cặp không thể và cặp chưa đặt.",
+    "rules": [
+      "Mỗi domino phủ đúng hai ô kề cạnh theo hàng hoặc cột. Phủ mỗi ô đúng một lần.",
+      "Dùng mỗi cặp số không phân biệt thứ tự từ 0 đến số lớn nhất đúng một lần, kể cả cặp đôi. Đảo thứ tự không tạo domino mới.",
+      "Đặt liên kết giữa hai số kề để ghép domino. Dấu phụ ghi lại các cạnh không thể ghép."
+    ]
+  },
+  "source": "puzzles.but: dominosa"
+}

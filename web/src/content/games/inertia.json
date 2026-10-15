@@ -1,0 +1,22 @@
+{
+  "name": "Inertia",
+  "en": {
+    "goal": "Slide to collect every gem, avoiding mines. Motion continues until an obstacle stops you.",
+    "input": "Click a direction to launch the ball that way. The ball keeps moving until it hits a wall, gem, or mine. Collect all gems without hitting a mine to win.",
+    "rules": [
+      "Choose one of eight directions. The ball keeps moving until a wall or stop square halts it.",
+      "Gems are collected while moving and do not stop the ball. Diagonal movement may pass through a diagonal gap between walls.",
+      "Collect every gem without hitting a mine. A move that collects the last gem and then hits a mine is still a loss."
+    ]
+  },
+  "vi": {
+    "goal": "Trượt để thu mọi viên ngọc và tránh mìn. Bạn tiếp tục trượt đến khi gặp vật cản.",
+    "input": "Nhấn hướng để bắn bi theo hướng đó. Bi tiếp tục lăn đến khi chạm tường, ngọc hoặc mìn. Thu mọi ngọc mà không chạm mìn để thắng.",
+    "rules": [
+      "Chọn một trong tám hướng. Bóng tiếp tục đi đến khi gặp tường hoặc ô dừng.",
+      "Ngọc được thu khi đi qua và không làm bóng dừng. Bóng đi chéo có thể xuyên khe chéo giữa hai bức tường.",
+      "Thu mọi ngọc và tránh mìn. Lượt thu viên cuối rồi trúng mìn vẫn bị tính thua."
+    ]
+  },
+  "source": "puzzles.but: inertia"
+}

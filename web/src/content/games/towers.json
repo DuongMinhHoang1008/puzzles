@@ -1,0 +1,22 @@
+{
+  "name": "Towers",
+  "en": {
+    "goal": "Use every height once per row and column. Edge clues count visible towers; taller towers hide shorter ones.",
+    "input": "Select a cell, then type a digit. Right-click for pencil or alternate selection. Use Backspace to clear and arrow keys to navigate.",
+    "rules": [
+      "Use each tower height from 1 to the grid size once in every row and column.",
+      "An edge clue counts visible towers when looking along that line. A taller tower hides every shorter tower behind it.",
+      "A clue of one means the tallest tower is first; a clue equal to the grid size means heights rise throughout the line. Pencil marks do not count as heights."
+    ]
+  },
+  "vi": {
+    "goal": "Mỗi hàng và cột có mỗi độ cao một lần. Số ngoài bàn đếm tháp nhìn thấy; tháp cao che tháp thấp.",
+    "input": "Chọn ô rồi nhập số. Nhấn chuột phải để chọn ghi chú hoặc thao tác phụ. Backspace để xóa, phím mũi tên để di chuyển.",
+    "rules": [
+      "Dùng mỗi độ cao tháp từ 1 đến kích thước bàn đúng một lần trong mỗi hàng và cột.",
+      "Số ngoài cạnh đếm tháp thấy được khi nhìn dọc hàng/cột. Tháp cao che mọi tháp thấp hơn phía sau.",
+      "Gợi ý 1 yêu cầu tháp cao nhất ở đầu; gợi ý bằng kích thước bàn yêu cầu độ cao tăng suốt hàng/cột. Ghi chú không được tính là độ cao."
+    ]
+  },
+  "source": "puzzles.but: towers"
+}

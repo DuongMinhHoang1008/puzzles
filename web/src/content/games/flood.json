@@ -1,0 +1,22 @@
+{
+  "name": "Flood",
+  "en": {
+    "goal": "Change the colour of the top-left region to absorb neighbours and cover the board within the move limit.",
+    "input": "Click a colour button to change the top-left region to that colour. The region absorbs all adjacent regions of the same colour. Cover the entire board within the move limit to win.",
+    "rules": [
+      "A move changes the whole same-colour region connected to the top-left square through shared edges.",
+      "Neighbours of the chosen new colour join the growing region. Diagonal contact alone does not merge them.",
+      "Cover the board within the displayed move budget. The extra-moves setting changes that budget; it does not change connectivity rules."
+    ]
+  },
+  "vi": {
+    "goal": "Đổi màu vùng góc trên trái để hấp thụ các vùng kề và phủ toàn bàn trong giới hạn lượt.",
+    "input": "Nhấn nút màu để đổi vùng góc trên trái thành màu đó. Vùng hấp thụ mọi vùng kề cùng màu. Phủ toàn bàn trong giới hạn lượt để thắng.",
+    "rules": [
+      "Mỗi lượt đổi màu toàn vùng cùng màu nối với ô góc trên trái qua các cạnh.",
+      "Các ô kề có màu mới nhập vào vùng đang lớn. Chỉ tiếp xúc chéo không làm nhập vùng.",
+      "Phủ toàn bàn trong giới hạn lượt hiển thị. Cài đặt lượt thêm đổi giới hạn này, không đổi quy tắc liên thông."
+    ]
+  },
+  "source": "puzzles.but: flood"
+}

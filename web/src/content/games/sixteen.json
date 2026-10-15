@@ -1,0 +1,22 @@
+{
+  "name": "Sixteen",
+  "en": {
+    "goal": "Shift whole rows and columns cyclically until all numbered tiles are in order.",
+    "input": "Click an arrow at the row or column edge to shift that row or column one step cyclically. Arrow keys also shift. The goal is to arrange tiles 1-16 in reading order.",
+    "rules": [
+      "All cells are occupied. Shift an entire row or column; its outgoing tile wraps to the other end.",
+      "Arrange numbers in ascending reading order. There is no empty space to move individual tiles into.",
+      "The arrows around the board choose a shift direction. Different board dimensions change the target order but not the wrap rule."
+    ]
+  },
+  "vi": {
+    "goal": "Dịch vòng cả hàng hoặc cột để xếp các ô số đúng thứ tự.",
+    "input": "Nhấn mũi tên ở cạnh hàng hoặc cột để dịch vòng một bước. Phím mũi tên cũng dịch. Mục tiêu là sắp xếp các ô 1-16 theo thứ tự đọc.",
+    "rules": [
+      "Mọi ô đều có số. Dịch cả hàng/cột; ô ra khỏi một đầu quay lại ở đầu kia.",
+      "Xếp số tăng dần theo thứ tự đọc. Không có ô trống để trượt riêng một ô vào.",
+      "Mũi tên quanh bàn chọn hướng dịch. Kích thước bàn khác thay đổi thứ tự đích nhưng không đổi quy tắc cuộn."
+    ]
+  },
+  "source": "puzzles.but: sixteen"
+}

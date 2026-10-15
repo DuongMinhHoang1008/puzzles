@@ -1,0 +1,22 @@
+{
+  "name": "Slant",
+  "en": {
+    "goal": "Put a diagonal in every square. Clues count touching diagonals; diagonals must not form loops.",
+    "input": "Click a cell to toggle between the two diagonal directions. Right click (Secondary) cycles through blank first. Each numbered cell counts how many diagonals touch it; no diagonal loops are allowed.",
+    "rules": [
+      "Put exactly one of the two diagonals into every square.",
+      "A numbered intersection specifies exactly how many neighbouring diagonals touch it. Border intersections have fewer possible neighbours.",
+      "Diagonals must never form a closed loop, even if all numbered clues are satisfied. Branches are allowed."
+    ]
+  },
+  "vi": {
+    "goal": "Đặt một đường chéo trong mỗi ô. Số đếm đường chéo chạm vào điểm đó; không được tạo vòng kín.",
+    "input": "Nhấn ô để chuyển giữa hai hướng đường chéo. Nhấn phải (Thao tác phụ) quay qua trạng thái trống trước. Mỗi ô số đếm đường chéo chạm vào; không được tạo vòng kín.",
+    "rules": [
+      "Đặt đúng một trong hai đường chéo vào mỗi ô.",
+      "Số tại giao điểm chỉ đúng số đường chéo lân cận chạm vào nó. Giao điểm mép bàn có ít đường kề hơn.",
+      "Các đường chéo không được tạo vòng kín dù đã thỏa mọi số. Phân nhánh được phép."
+    ]
+  },
+  "source": "puzzles.but: slant"
+}

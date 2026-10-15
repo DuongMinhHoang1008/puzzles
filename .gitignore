@@ -124,3 +124,9 @@
 /unfinished/separate
 /unfinished/slide
 /unfinished/sokoban
+/build/web/
+/web/node_modules/
+/web/dist/
+/web/public/engine/
+/web/test-results/
+/web/playwright-report/

@@ -1,0 +1,33 @@
+name: Build Puzzle Studio
+description: Build local C engines and validate the frontend
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+      with:
+        node-version: '24.19.0'
+        cache: npm
+        cache-dependency-path: web/package-lock.json
+    - name: Install pinned Emscripten
+      shell: bash
+      run: |
+        mkdir -p build/web
+        git clone https://github.com/emscripten-core/emsdk.git build/web/emsdk
+        git -C build/web/emsdk checkout b44154299bdefe75ba287874bb63fc9806243771
+        build/web/emsdk/emsdk install 4.0.20
+        build/web/emsdk/emsdk activate 4.0.20
+    - name: Build and check
+      shell: bash
+      run: |
+        source build/web/emsdk/emsdk_env.sh
+        npm --prefix web ci
+        npm --prefix web run build:engine
+        npm --prefix web run typecheck
+        npm --prefix web run test
+        npm --prefix web run build:frontend
+    - name: Browser integration
+      shell: bash
+      run: |
+        cd web
+        npx playwright install --with-deps chromium
+        npm run test:e2e

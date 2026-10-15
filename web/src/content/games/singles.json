@@ -1,0 +1,22 @@
+{
+  "name": "Singles",
+  "en": {
+    "goal": "Black out repeated numbers so remaining rows and columns have no duplicates. Black cells cannot touch; white cells stay connected.",
+    "input": "Select a cell, then type a digit. Right-click for pencil or alternate selection. Use Backspace to clear and arrow keys to navigate.",
+    "rules": [
+      "Black out enough cells so each remaining row and column contains no repeated numbers.",
+      "Black cells cannot share an edge. Diagonal black contact is allowed.",
+      "All remaining white cells must form one connected area through shared edges. Marking a cell white records a deduction, not a new number."
+    ]
+  },
+  "vi": {
+    "goal": "Tô đen số trùng để hàng và cột trắng không còn lặp. Ô đen không kề cạnh; ô trắng phải liên thông.",
+    "input": "Chọn ô rồi nhập số. Nhấn chuột phải để chọn ghi chú hoặc thao tác phụ. Backspace để xóa, phím mũi tên để di chuyển.",
+    "rules": [
+      "Tô đen đủ ô để mỗi hàng và cột còn lại không có số lặp.",
+      "Ô đen không được chung cạnh. Tiếp xúc đen theo chéo được phép.",
+      "Mọi ô trắng còn lại phải thành một vùng liên thông qua cạnh. Đánh dấu ô trắng ghi một suy luận, không tạo số mới."
+    ]
+  },
+  "source": "puzzles.but: singles"
+}

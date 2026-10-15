@@ -1,0 +1,22 @@
+{
+  "name": "Loopy",
+  "en": {
+    "goal": "Draw one closed loop along edges. Each clue counts the loop edges around its cell.",
+    "input": "Click an edge to toggle it between line and blank. Right click (Secondary) marks an edge as definitely not part of the loop. Clues show how many loop edges surround each numbered cell.",
+    "rules": [
+      "Select grid edges to form one closed, non-branching loop. The loop cannot cross or touch itself at a vertex.",
+      "A clue counts the selected edges around that cell. Cells without numbers have no local count requirement.",
+      "Grid presets may use triangles, hexagons or other shapes, so the number of possible edges per cell varies. Secondary marks rule out edges."
+    ]
+  },
+  "vi": {
+    "goal": "Vẽ một vòng kín duy nhất theo các cạnh. Số trong ô là số cạnh của vòng quanh ô đó.",
+    "input": "Nhấn cạnh để chuyển giữa có và không có đường. Nhấn phải (Thao tác phụ) đánh dấu cạnh chắc chắn không thuộc vòng. Số cho biết có bao nhiêu cạnh của vòng quanh ô đó.",
+    "rules": [
+      "Chọn cạnh lưới để tạo một vòng kín không phân nhánh. Vòng không được cắt hoặc tự chạm tại đỉnh.",
+      "Số trong ô đếm các cạnh được chọn quanh ô. Ô không số không có ràng buộc đếm riêng.",
+      "Mẫu lưới có thể dùng tam giác, lục giác hoặc hình khác nên số cạnh mỗi ô thay đổi. Dấu phụ loại các cạnh không thuộc vòng."
+    ]
+  },
+  "source": "puzzles.but: loopy"
+}

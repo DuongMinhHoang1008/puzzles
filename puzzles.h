@@ -257,6 +257,12 @@ int midend_can_format_as_text_now(midend *me);
 char *midend_text_format(midend *me);
 char *midend_solve(midend *me);
 int midend_status(midend *me);
+#ifdef __EMSCRIPTEN__
+int midend_web_cause(midend *me);
+unsigned midend_web_revision(midend *me);
+unsigned midend_web_ui_revision(midend *me);
+int midend_web_assisted(midend *me);
+#endif
 int midend_can_undo(midend *me);
 int midend_can_redo(midend *me);
 void midend_supersede_game_desc(midend *me, char *desc, char *privdesc);

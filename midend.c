@@ -27,6 +27,10 @@ struct midend_state_entry {
 
 struct midend {
     frontend *frontend;
+#ifdef __EMSCRIPTEN__
+    unsigned web_revision, web_ui_revision;
+    int web_cause;
+#endif
     random_state *random;
     const game *ourgame;
 
@@ -130,6 +134,10 @@ midend *midend_new(frontend *fe, const game *ourgame,
     me->ourgame = ourgame;
     me->random = random_new(randseed, randseedsize);
     me->nstates = me->statesize = me->statepos = 0;
+#ifdef __EMSCRIPTEN__
+    me->web_revision = me->web_ui_revision = 0;
+    me->web_cause = 0;
+#endif
     me->states = NULL;
     me->params = ourgame->default_params();
     me->game_id_change_notify_function = NULL;
@@ -449,6 +457,9 @@ void midend_new_game(midend *me)
     me->states[me->nstates].movetype = NEWGAME;
     me->nstates++;
     me->statepos = 1;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 0;
+#endif
     me->drawstate = me->ourgame->new_drawstate(me->drawing,
 					       me->states[0].state);
     midend_size_new_drawstate(me);
@@ -481,6 +492,9 @@ static int midend_undo(midend *me)
                                        me->states[me->statepos-1].state,
                                        me->states[me->statepos-2].state);
 	me->statepos--;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 2;
+#endif
         me->dir = -1;
         return 1;
     } else
@@ -495,6 +509,9 @@ static int midend_redo(midend *me)
                                        me->states[me->statepos-1].state,
                                        me->states[me->statepos].state);
 	me->statepos++;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 3;
+#endif
         me->dir = +1;
         return 1;
     } else
@@ -571,6 +588,9 @@ void midend_restart_game(midend *me)
     me->states[me->nstates].movestr = dupstr(me->desc);
     me->states[me->nstates].movetype = RESTART;
     me->statepos = ++me->nstates;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 4;
+#endif
     if (me->ui)
         me->ourgame->changed_state(me->ui,
                                    me->states[me->statepos-2].state,
@@ -635,6 +655,11 @@ static int midend_really_process_key(midend *me, int x, int y, int button)
              * indicate that although no move has been made, the UI
              * state has been updated and a redraw is called for.
              */
+            /* Empty UI-only strings are static sentinels, not owned moves. */
+            if (*movestr) sfree(movestr);
+#ifdef __EMSCRIPTEN__
+            me->web_ui_revision++;
+#endif
             midend_redraw(me);
             midend_set_timer(me);
             goto done;
@@ -647,6 +672,9 @@ static int midend_really_process_key(midend *me, int x, int y, int button)
             me->states[me->nstates].movestr = movestr;
             me->states[me->nstates].movetype = MOVE;
             me->statepos = ++me->nstates;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 1;
+#endif
             me->dir = +1;
 	    if (me->ui)
 		me->ourgame->changed_state(me->ui,
@@ -1411,6 +1439,9 @@ char *midend_solve(midend *me)
     me->states[me->nstates].movestr = movestr;
     me->states[me->nstates].movetype = SOLVE;
     me->statepos = ++me->nstates;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 5;
+#endif
     if (me->ui)
         me->ourgame->changed_state(me->ui,
                                    me->states[me->statepos-2].state,
@@ -1697,6 +1728,9 @@ char *midend_deserialise(midend *me,
             if (c == ':') {
                 break;
             } else if (c >= '0' && c <= '9') {
+                if (len > (16777216 - (c - '0')) / 10) {
+                    ret = "Save record exceeds size limit"; goto cleanup;
+                }
                 len = (len * 10) + (c - '0');
             } else {
                 if (started)
@@ -1708,7 +1742,6 @@ char *midend_deserialise(midend *me,
 
         val = snewn(len+1, char);
         if (!read(rctx, val, len)) {
-            if (started)
             goto cleanup;
         }
         val[len] = '\0';
@@ -1771,13 +1804,13 @@ char *midend_deserialise(midend *me,
             } else if (!strcmp(key, "TIME")) {
                 elapsed = (float)atof(val);
             } else if (!strcmp(key, "NSTATES")) {
-                nstates = atoi(val);
-                if (nstates <= 0) {
-                    ret = "Number of states in save file was negative";
-                    goto cleanup;
-                }
                 if (states) {
                     ret = "Two state counts provided in save file";
+                    goto cleanup;
+                }
+                nstates = atoi(val);
+                if (nstates <= 0 || nstates > 100000) {
+                    ret = "Number of states in save file was negative";
                     goto cleanup;
                 }
                 states = snewn(nstates, struct midend_state_entry);
@@ -1789,16 +1822,25 @@ char *midend_deserialise(midend *me,
             } else if (!strcmp(key, "STATEPOS")) {
                 statepos = atoi(val);
             } else if (!strcmp(key, "MOVE")) {
+                if (!states || gotstates + 1 >= nstates) {
+                    ret = "Save history is out of range"; goto cleanup;
+                }
                 gotstates++;
                 states[gotstates].movetype = MOVE;
                 states[gotstates].movestr = val;
                 val = NULL;
             } else if (!strcmp(key, "SOLVE")) {
+                if (!states || gotstates + 1 >= nstates) {
+                    ret = "Save history is out of range"; goto cleanup;
+                }
                 gotstates++;
                 states[gotstates].movetype = SOLVE;
                 states[gotstates].movestr = val;
                 val = NULL;
             } else if (!strcmp(key, "RESTART")) {
+                if (!states || gotstates + 1 >= nstates) {
+                    ret = "Save history is out of range"; goto cleanup;
+                }
                 gotstates++;
                 states[gotstates].movetype = RESTART;
                 states[gotstates].movestr = val;
@@ -1841,8 +1883,9 @@ char *midend_deserialise(midend *me,
         ret = "Game private description in save file is invalid";
         goto cleanup;
     }
-    if (statepos < 0 || statepos >= nstates) {
+    if (statepos < 1 || statepos > nstates) {
         ret = "Game position in save file is out of range";
+        goto cleanup;
     }
 
     states[0].state = me->ourgame->new_game(me, params,
@@ -1912,6 +1955,9 @@ char *midend_deserialise(midend *me,
         states = tmp;
     }
     me->statepos = statepos;
+#ifdef __EMSCRIPTEN__
+    me->web_revision++; me->web_cause = 6;
+#endif
 
     {
         game_params *tmp;
@@ -2124,3 +2170,17 @@ char *midend_print_puzzle(midend *me, document *doc, int with_soln)
 
     return NULL;
 }
+
+#ifdef __EMSCRIPTEN__
+int midend_web_cause(midend *me) { return me->web_cause; }
+unsigned midend_web_revision(midend *me) { return me->web_revision; }
+unsigned midend_web_ui_revision(midend *me) { return me->web_ui_revision; }
+int midend_web_assisted(midend *me) {
+    int i;
+    for (i = me->statepos - 1; i > 0; --i) {
+        if (me->states[i].movetype == RESTART) return 0;
+        if (me->states[i].movetype == SOLVE) return 1;
+    }
+    return 0;
+}
+#endif

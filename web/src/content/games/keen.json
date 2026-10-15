@@ -1,0 +1,22 @@
+{
+  "name": "Keen",
+  "en": {
+    "goal": "Use every digit once in each row and column. Each cage must satisfy its labelled arithmetic operation.",
+    "input": "Select a cell, then type a digit. Right-click for pencil or alternate selection. Use Backspace to clear and arrow keys to navigate.",
+    "rules": [
+      "Each row and column contains each digit from 1 to the grid size once. There are no Sudoku blocks.",
+      "Every outlined cage must produce its clue using the displayed operation. Addition and multiplication use all cells; subtraction and division use the cage’s two cells.",
+      "Digits may repeat within a cage if row and column uniqueness allow it. Pencil marks are notes and do not satisfy a cage."
+    ]
+  },
+  "vi": {
+    "goal": "Mỗi hàng và cột chứa mỗi chữ số đúng một lần. Mỗi lồng phải thỏa phép tính ghi trên nhãn.",
+    "input": "Chọn ô rồi nhập số. Nhấn chuột phải để chọn ghi chú hoặc thao tác phụ. Backspace để xóa, phím mũi tên để di chuyển.",
+    "rules": [
+      "Mỗi hàng và cột chứa mỗi số từ 1 đến kích thước bàn đúng một lần. Không có khối Sudoku.",
+      "Mỗi lồng viền phải tạo đúng số gợi ý theo phép tính ghi trên nhãn. Cộng và nhân dùng mọi ô; trừ và chia dùng hai ô trong lồng.",
+      "Số có thể lặp trong lồng nếu không vi phạm hàng và cột. Ghi chú chỉ để suy luận, không được tính là số đã điền."
+    ]
+  },
+  "source": "puzzles.but: keen"
+}

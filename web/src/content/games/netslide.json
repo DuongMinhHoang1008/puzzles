@@ -1,0 +1,22 @@
+{
+  "name": "Netslide",
+  "en": {
+    "goal": "Slide rows and columns to connect the entire network to its source.",
+    "input": "Click an arrow at the edge of a row or column to slide that row or column. The source tile is fixed; all other tiles slide to connect the network. Arrow keys also move tiles.",
+    "rules": [
+      "Shift whole rows or columns cyclically rather than rotating individual tiles. A tile leaving one end reappears at the other.",
+      "Join all wire tiles into a network connected to the highlighted source. Adjacent wire ends must match.",
+      "Use the arrows around the board for shifts. Native motion shows the actual shifted row or column; Undo reverses a committed shift."
+    ]
+  },
+  "vi": {
+    "goal": "Trượt hàng và cột để nối toàn bộ mạng với nguồn.",
+    "input": "Nhấn mũi tên ở cạnh hàng hoặc cột để trượt. Ô nguồn cố định; các ô khác trượt để nối mạng. Phím mũi tên cũng di chuyển ô.",
+    "rules": [
+      "Dịch vòng cả hàng hoặc cột thay vì xoay từng ô. Ô rời một đầu xuất hiện lại ở đầu kia.",
+      "Nối mọi ô dây thành mạng liên thông với nguồn tô sáng. Các đầu dây kề nhau phải khớp.",
+      "Dùng mũi tên quanh bàn để dịch. Chuyển động engine hiển thị hàng/cột thực sự được dịch; Hoàn tác đảo lại một lượt đã thực hiện."
+    ]
+  },
+  "source": "puzzles.but: netslide"
+}

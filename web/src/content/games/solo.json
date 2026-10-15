@@ -1,0 +1,22 @@
+{
+  "name": "Solo",
+  "en": {
+    "goal": "Fill every row, column and block with each digit exactly once. Secondary selection enters pencil marks.",
+    "input": "Select a cell, then enter a digit (letters are used for larger boards). Right click (Secondary) selects pencil marks; entering the same symbol removes a mark. Space or 0 clears a cell. Arrow keys move the selection; Enter switches pencil mode. X mode requires unique diagonals, Jigsaw uses irregular blocks, and Killer cages constrain digit sums.",
+    "rules": [
+      "Fill every row, column and outlined block with each allowed symbol exactly once. Given clues cannot be changed.",
+      "X mode adds the same uniqueness rule to both main diagonals. Jigsaw replaces rectangular blocks with irregular regions.",
+      "Killer cages must sum to their printed clues and cannot repeat a digit even across block boundaries. Larger non-Killer boards use letters after 9; pencil marks are only notes."
+    ]
+  },
+  "vi": {
+    "goal": "Điền mỗi chữ số đúng một lần trong mỗi hàng, cột và khối. Chọn phụ để nhập ghi chú.",
+    "input": "Chọn ô rồi nhập số (bàn lớn dùng thêm chữ). Nhấn phải (Thao tác phụ) chọn ghi chú; nhập lại cùng ký hiệu để bỏ ghi chú. Space hoặc 0 xóa ô. Mũi tên di chuyển; Enter đổi chế độ ghi chú. Chế độ X yêu cầu hai đường chéo không trùng số, Jigsaw dùng khối bất quy tắc, Killer ràng buộc tổng số trong lồng.",
+    "rules": [
+      "Điền mỗi ký hiệu cho phép đúng một lần trong mỗi hàng, cột và khối viền. Không đổi số đã cho.",
+      "Chế độ X áp dụng quy tắc không trùng cho cả hai đường chéo chính. Jigsaw thay khối chữ nhật bằng vùng bất quy tắc.",
+      "Lồng Killer phải có tổng bằng nhãn và không được lặp số dù đi qua nhiều khối. Bàn lớn không phải Killer dùng chữ sau số 9; ghi chú chỉ là ghi chú."
+    ]
+  },
+  "source": "puzzles.but: solo"
+}

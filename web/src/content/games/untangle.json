@@ -1,0 +1,22 @@
+{
+  "name": "Untangle",
+  "en": {
+    "goal": "Drag the vertices until no two edges cross.",
+    "input": "Drag vertices to rearrange the graph. The goal is to position all vertices so that no two edges cross. A counter shows how many crossings remain.",
+    "rules": [
+      "Move the vertices until edges no longer cross each other. The graph’s connections remain fixed while vertices move.",
+      "Edges meeting at their shared vertex are allowed. Moving a vertex changes every edge attached to it.",
+      "The number-of-points preset changes graph size. Use deliberate drags and Undo to explore without losing earlier arrangements."
+    ]
+  },
+  "vi": {
+    "goal": "Kéo các đỉnh để không có hai cạnh giao nhau.",
+    "input": "Kéo các đỉnh để sắp xếp lại đồ thị. Mục tiêu là đặt mọi đỉnh sao cho không có hai cạnh nào giao nhau. Đếm số giao điểm còn lại.",
+    "rules": [
+      "Di chuyển đỉnh đến khi các cạnh không còn cắt nhau. Liên kết của đồ thị giữ nguyên trong khi kéo đỉnh.",
+      "Các cạnh gặp nhau tại đỉnh chung được phép. Di chuyển một đỉnh thay đổi mọi cạnh gắn với nó.",
+      "Mẫu số đỉnh đổi kích thước đồ thị. Kéo có chủ đích và dùng Hoàn tác để thử mà không mất bố trí trước."
+    ]
+  },
+  "source": "puzzles.but: untangle"
+}

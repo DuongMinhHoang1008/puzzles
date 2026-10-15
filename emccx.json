@@ -1,29 +1,29 @@
-// -*- js -*-
-//
-// List of entry points exported by the C side of the Emscripten
-// puzzle builds. Passed in to emcc via the option '-s
-// EXPORTED_FUNCTIONS=[list]'.
-//
-// This file isn't actually a valid list in its current state, since
-// emcc doesn't like comments or newlines. However, it's a nicer
-// source form to keep the comments and newlines in, so we sed them
-// away at compile time.
 [
-    // Event handlers for mouse and keyboard input
-    '_mouseup',
-    '_mousedown',
-    '_mousemove',
-    '_key',
-    // Callback when the program activates timing
-    '_timer_callback',
-    // Callback from button presses in the UI outside the canvas
-    '_command',
-    // Callbacks to return values from dialog boxes
-    '_dlg_return_sval',
-    '_dlg_return_ival',
-    // Callbacks when the resizing controls are used
-    '_resize_puzzle',
-    '_restore_puzzle_size',
-    // Main program, run at initialisation time
-    '_main'
+  "_mouseup",
+  "_mousedown",
+  "_mousemove",
+  "_key",
+  "_timer_callback",
+  "_command",
+  "_dlg_return_sval",
+  "_dlg_return_ival",
+  "_resize_puzzle",
+  "_restore_puzzle_size",
+  "_main",
+  "_web_save",
+  "_web_save_length",
+  "_web_restore",
+  "_web_game_id",
+  "_web_status",
+  "_web_revision",
+  "_web_ui_revision",
+  "_web_assisted",
+  "_web_can_solve",
+  "_web_can_configure",
+  "_web_stop_anim",
+  "_web_redraw",
+  "_web_dispose",
+  "_malloc",
+  "_free",
+  "_web_cause"
 ]

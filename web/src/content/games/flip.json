@@ -1,0 +1,22 @@
+{
+  "name": "Flip",
+  "en": {
+    "goal": "Make every square light. A click flips that square and the neighbours shown by its pattern.",
+    "input": "Click a square to toggle it and its neighbours (shown by the cell pattern) between lit and unlit. Right click (Secondary) toggles only that square. The goal is to light all squares.",
+    "rules": [
+      "Every square must be light at the same time to win.",
+      "Clicking changes both the chosen square and all squares indicated by its miniature pattern.",
+      "A move may darken already lit cells. Repeating the same flip reverses its effect; plan combinations rather than filling cells independently."
+    ]
+  },
+  "vi": {
+    "goal": "Làm sáng tất cả ô. Mỗi lần nhấn lật ô đó và các ô lân cận theo mẫu của ô.",
+    "input": "Nhấn một ô để lật ô đó và các ô lân cận (theo mẫu hiển thị) giữa sáng và tối. Nhấn phải (Thao tác phụ) chỉ lật ô đó. Mục tiêu là làm sáng mọi ô.",
+    "rules": [
+      "Mọi ô phải cùng sáng để thắng.",
+      "Nhấn một ô đổi trạng thái ô đó và tất cả ô được chỉ trong mẫu nhỏ của nó.",
+      "Một lượt có thể làm tối ô đang sáng. Lặp lại cùng thao tác lật sẽ đảo hiệu ứng; hãy phối hợp các lượt thay vì xử lý riêng từng ô."
+    ]
+  },
+  "source": "puzzles.but: flip"
+}

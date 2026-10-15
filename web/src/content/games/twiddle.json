@@ -1,0 +1,22 @@
+{
+  "name": "Twiddle",
+  "en": {
+    "goal": "Rotate small blocks to put every tile in numerical order. Secondary input rotates the other way.",
+    "input": "Click a block of tiles to rotate it clockwise. Right click (Secondary) rotates counterclockwise. Arrange all tiles in numerical order by rotating the small blocks.",
+    "rules": [
+      "Rotate square groups of tiles to put the numbers in reading order. The basic rotating group is 2×2.",
+      "Advanced presets use larger rotating blocks. Secondary input rotates in the opposite direction.",
+      "Orientation matters only when that setting is enabled. Rows-only mode and repeated numbers alter the target arrangement shown by the preset."
+    ]
+  },
+  "vi": {
+    "goal": "Xoay từng khối nhỏ để xếp ô theo thứ tự số. Thao tác phụ xoay theo chiều ngược lại.",
+    "input": "Nhấn khối ô để xoay nó theo chiều kim đồng hồ. Nhấn phải (Thao tác phụ) xoay ngược chiều. Sắp xếp mọi ô theo thứ tự số bằng cách xoay các khối nhỏ.",
+    "rules": [
+      "Xoay nhóm ô vuông để xếp số theo thứ tự đọc. Nhóm xoay cơ bản là 2×2.",
+      "Mẫu nâng cao dùng khối xoay lớn hơn. Thao tác phụ xoay theo hướng ngược lại.",
+      "Hướng ô chỉ quan trọng khi bật cài đặt tương ứng. Chế độ chỉ hàng và số lặp đổi cách xếp đích theo mẫu."
+    ]
+  },
+  "source": "puzzles.but: twiddle"
+}

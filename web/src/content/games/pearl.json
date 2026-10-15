@@ -1,0 +1,22 @@
+{
+  "name": "Pearl",
+  "en": {
+    "goal": "Draw a single loop through all pearls. Turn at black pearls and go straight through the next cells; go straight at white pearls and turn next to them.",
+    "input": "Drag between cell centres to draw or remove loop segments. Secondary drags mark paths that cannot be used. Follow the black and white pearl rules together.",
+    "rules": [
+      "Draw one closed loop through every pearl. It travels between cell centres and cannot branch, cross or revisit a cell.",
+      "At a black pearl the loop turns, and it goes straight in both cells immediately before and after that pearl.",
+      "At a white pearl the loop goes straight and turns in at least one neighbouring cell on its route. Empty cells have no pearl constraint."
+    ]
+  },
+  "vi": {
+    "goal": "Vẽ một vòng qua mọi ngọc. Ngọc đen bắt buộc rẽ và hai ô kế tiếp đi thẳng; ngọc trắng đi thẳng và phải rẽ ở ít nhất một ô kề.",
+    "input": "Kéo giữa tâm ô để vẽ hoặc bỏ đoạn vòng. Kéo phụ đánh dấu đường không dùng. Thỏa đồng thời quy tắc ngọc đen và trắng.",
+    "rules": [
+      "Vẽ một vòng kín qua mọi ngọc. Vòng đi giữa tâm ô, không phân nhánh, cắt hoặc đi lại qua một ô.",
+      "Tại ngọc đen vòng phải rẽ, và phải đi thẳng ở cả hai ô ngay trước và sau ngọc.",
+      "Tại ngọc trắng vòng đi thẳng và rẽ ở ít nhất một ô kề trên đường đi. Ô không ngọc không có ràng buộc ngọc."
+    ]
+  },
+  "source": "puzzles.but: pearl"
+}

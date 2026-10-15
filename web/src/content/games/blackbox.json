@@ -1,0 +1,22 @@
+{
+  "name": "Black Box",
+  "en": {
+    "goal": "Find hidden balls by firing rays; their entry and exit reveal reflections and deflections.",
+    "input": "Click a border entry to fire a ray. Click inside the arena to place or remove a guessed ball. Secondary clicks mark cells you believe are empty; use the check control when enough balls have been marked.",
+    "rules": [
+      "A ray hitting a ball head-on is absorbed (H). A ball ahead-left deflects it right; a ball ahead-right deflects it left.",
+      "A ray returning to its entry, or deflected before entering, is reflected (R). Matching numbered border cells show a ray’s entry and exit.",
+      "Mark suspected balls inside the arena, then use the check control when enough are marked. A different layout is accepted if it produces the same ray results."
+    ]
+  },
+  "vi": {
+    "goal": "Tìm các quả cầu ẩn bằng tia dò. Vị trí vào và ra cho biết tia bị phản xạ hoặc đổi hướng.",
+    "input": "Nhấn điểm vào ở cạnh để bắn tia. Nhấn bên trong để đặt hoặc bỏ quả cầu dự đoán. Nhấn phụ đánh dấu ô được cho là trống; dùng nút kiểm tra khi đã đánh dấu đủ quả cầu.",
+    "rules": [
+      "Tia trúng quả cầu trực diện bị hấp thụ (H). Quả cầu ở trước-trái làm tia rẽ phải; trước-phải làm tia rẽ trái.",
+      "Tia quay lại điểm vào, hoặc bị đổi hướng trước khi vào bàn, được ghi phản xạ (R). Hai ô cạnh cùng số là điểm vào và ra của một tia.",
+      "Đánh dấu các quả cầu dự đoán bên trong rồi dùng nút kiểm tra khi đã đánh dấu đủ. Bố trí khác vẫn được chấp nhận nếu tạo cùng kết quả tia dò."
+    ]
+  },
+  "source": "puzzles.but: blackbox"
+}

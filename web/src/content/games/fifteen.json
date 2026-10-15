@@ -1,0 +1,22 @@
+{
+  "name": "Fifteen",
+  "en": {
+    "goal": "Slide tiles into the empty space to arrange the numbers in reading order.",
+    "input": "Click a tile adjacent to the empty space to slide it. Arrow keys also slide tiles in that direction. Only legal moves are allowed.",
+    "rules": [
+      "Move tiles into the single empty space; tiles cannot jump over occupied spaces.",
+      "Arrange numbers in reading order, with the empty space at the bottom-right.",
+      "Clicking a tile in the same row or column as the gap slides the intervening tiles. Arrow keys offer directional moves."
+    ]
+  },
+  "vi": {
+    "goal": "Trượt ô vào khoảng trống để xếp các số theo thứ tự từ trái sang phải, trên xuống dưới.",
+    "input": "Nhấn ô kề khoảng trống để trượt nó. Phím mũi tên cũng trượt ô theo hướng đó. Chỉ nước đi hợp lệ mới được chấp nhận.",
+    "rules": [
+      "Di chuyển ô vào khoảng trống duy nhất; ô không thể nhảy qua ô đã có số.",
+      "Xếp số theo thứ tự đọc, khoảng trống ở góc dưới phải.",
+      "Nhấn ô cùng hàng hoặc cột với khoảng trống để trượt các ô ở giữa. Phím mũi tên cho phép di chuyển theo hướng."
+    ]
+  },
+  "source": "puzzles.but: fifteen"
+}

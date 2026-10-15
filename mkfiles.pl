@@ -1773,10 +1773,9 @@ if (defined $makefiles{'emcc'}) {
       print &splitline("\$(OUTPREFIX)" . $prog . ".js: " . $objstr . " emccpre.js emcclib.js emccx.json"), "\n";
       print "\t\$(EMCC) -o \$(OUTPREFIX)".$prog.".js ".
           "-O2 ".
-          "-s ASM_JS=1 ".
-          "--pre-js emccpre.js ".
+          "-s MODULARIZE=1 -s EXPORT_ES6=1 -s ALLOW_MEMORY_GROWTH=1 -s NO_EXIT_RUNTIME=1 ".
           "--js-library emcclib.js ".
-          "-s EXPORTED_FUNCTIONS=\"`sed 's://.*::' emccx.json | tr -d ' \\n'`\" " . $objstr . "\n\n";
+          "-s EXPORTED_FUNCTIONS=\"\@emccx.json\" -s EXPORTED_RUNTIME_METHODS=\"['ccall','UTF8ToString','HEAPU8']\" " . $objstr . "\n\n";
     }
     foreach $d (&deps("X.o", undef, $dirpfx, "/")) {
       $oobjs = $d->{obj};

@@ -1,0 +1,22 @@
+{
+  "name": "Rectangles",
+  "en": {
+    "goal": "Partition the board into rectangles, each containing one clue equal to its area.",
+    "input": "Click and drag to draw rectangle boundaries. Each rectangle must contain exactly one clue, and its area must equal that clue. Right click (Secondary) erases a boundary. Every cell belongs to exactly one rectangle.",
+    "rules": [
+      "Partition every square into non-overlapping rectangles whose edges follow the grid. Leave no uncovered cells.",
+      "Each rectangle contains exactly one numbered clue. Its area, not its perimeter, equals that clue.",
+      "A clue of six can describe shapes such as 1×6 or 2×3. Use neighbouring clues to rule out candidate rectangles."
+    ]
+  },
+  "vi": {
+    "goal": "Chia bàn thành các hình chữ nhật, mỗi hình chứa một số bằng diện tích của nó.",
+    "input": "Nhấn và kéo để vẽ ranh giới hình chữ nhật. Mỗi hình chứa đúng một số và diện tích bằng số đó. Nhấn phải (Thao tác phụ) xóa ranh giới. Mọi ô thuộc đúng một hình chữ nhật.",
+    "rules": [
+      "Chia mọi ô thành các hình chữ nhật không chồng lấn, cạnh theo lưới. Không để ô chưa thuộc hình nào.",
+      "Mỗi hình chữ nhật chứa đúng một số gợi ý. Diện tích, không phải chu vi, bằng số đó.",
+      "Số 6 có thể chỉ hình 1×6 hoặc 2×3. Dùng các gợi ý lân cận để loại các hình ứng viên."
+    ]
+  },
+  "source": "puzzles.but: rect"
+}

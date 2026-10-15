@@ -1,0 +1,22 @@
+{
+  "name": "Pattern",
+  "en": {
+    "goal": "Shade cells to match the run lengths beside every row and column. Separate runs by at least one empty cell.",
+    "input": "Click a cell to toggle between filled, empty, and blank. Run lengths beside rows and columns show exact shaded segments; separate runs by at least one empty cell.",
+    "rules": [
+      "Numbers beside a line give the lengths of its shaded runs, in order. Separate consecutive runs by at least one unshaded cell.",
+      "Runs may start or end at the border. Blank space can occur before the first run or after the last run.",
+      "Solve row and column clues simultaneously. Secondary marks identify known empty cells; they are different from leaving a cell undecided."
+    ]
+  },
+  "vi": {
+    "goal": "Tô ô theo độ dài các đoạn ở mỗi hàng và cột. Hai đoạn phải cách nhau ít nhất một ô trống.",
+    "input": "Nhấn ô để chuyển giữa tô, trống và chưa điền. Độ dài đoạn tô bên hàng và cột cho biết số ô tô liên tiếp; các đoạn cách nhau ít nhất một ô trống.",
+    "rules": [
+      "Số cạnh một hàng/cột cho độ dài các đoạn tô theo thứ tự. Giữa hai đoạn phải có ít nhất một ô không tô.",
+      "Đoạn có thể bắt đầu hoặc kết thúc ở mép bàn. Có thể có ô trống trước đoạn đầu và sau đoạn cuối.",
+      "Thỏa đồng thời gợi ý hàng và cột. Dấu phụ xác định ô chắc chắn trống, khác với ô chưa quyết định."
+    ]
+  },
+  "source": "puzzles.but: pattern"
+}

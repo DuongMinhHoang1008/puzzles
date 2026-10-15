@@ -1,0 +1,22 @@
+{
+  "name": "Net",
+  "en": {
+    "goal": "Rotate tiles to connect every terminal to the source. Every tile must belong to a single network without loops.",
+    "input": "Left click rotates anticlockwise; right click (Secondary) rotates clockwise. Middle click (Middle) locks a tile. Arrow keys select tiles; A/D rotate, F turns 180°, S locks. Shift+arrows move a wrapping grid; Ctrl+arrows move the highlighting source. J jumbles unlocked tiles.",
+    "rules": [
+      "Rotate each tile to connect every tile to one network. Wires must meet across edges; a correctly solved network has no loops or dangling connections.",
+      "Powered highlighting shows the component connected to the current source. A highlighted tile alone does not prove its orientation is final.",
+      "Locked tiles cannot rotate until unlocked. Wrapping presets connect opposite board edges; walls still block connections."
+    ]
+  },
+  "vi": {
+    "goal": "Xoay ô để nối mọi đầu mạng với nguồn. Mọi ô phải thuộc một mạng duy nhất và không có vòng kín.",
+    "input": "Nhấn trái xoay ngược chiều kim đồng hồ; nhấn phải (Thao tác phụ) xoay cùng chiều. Nút giữa khóa ô. Mũi tên chọn ô; A/D xoay, F quay 180°, S khóa. Shift+mũi tên dịch bàn cuộn; Ctrl+mũi tên dời nguồn tô sáng. J xáo trộn ô chưa khóa.",
+    "rules": [
+      "Xoay từng ô để nối mọi ô thành một mạng. Dây phải nối đúng qua cạnh; mạng hoàn chỉnh không có vòng kín hoặc đầu nối hở.",
+      "Tô sáng nguồn cho biết thành phần đang nối với nguồn hiện tại. Một ô sáng chưa chứng minh nó đã có hướng cuối cùng đúng.",
+      "Ô bị khóa không xoay được đến khi mở khóa. Mẫu cuộn nối các mép đối diện; vách vẫn chặn kết nối."
+    ]
+  },
+  "source": "puzzles.but: net"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Pegs",
+  "en": {
+    "goal": "Jump a peg over an adjacent peg into a hole, removing the jumped peg. Finish with one peg.",
+    "input": "Click a peg to jump it over an adjacent peg into an empty space. The jumped peg is removed. Only valid jumps are allowed. Right click (Secondary) clears a peg. You win when only one peg remains.",
+    "rules": [
+      "Jump a peg horizontally or vertically over one adjacent peg into an empty hole immediately beyond it.",
+      "The jumped peg is removed. Diagonal jumps and jumps into occupied holes are not allowed.",
+      "Finish with exactly one peg anywhere on the playable board. Board silhouettes and random presets change which holes exist."
+    ]
+  },
+  "vi": {
+    "goal": "Nhảy một chốt qua chốt kề vào ô trống, xóa chốt bị nhảy qua. Kết thúc với một chốt.",
+    "input": "Nhấn một chốt để nhảy qua chốt kề vào ô trống. Chốt bị nhảy qua sẽ bị xóa. Chỉ nhảy hợp lệ mới được chấp nhận. Nhấn phải (Thao tác phụ) xóa chốt. Bạn thắng khi chỉ còn một chốt.",
+    "rules": [
+      "Nhảy chốt theo hàng hoặc cột qua đúng một chốt kề vào lỗ trống ngay phía sau.",
+      "Chốt bị nhảy qua được lấy đi. Không được nhảy chéo hoặc nhảy vào lỗ đã có chốt.",
+      "Kết thúc với đúng một chốt ở bất kỳ lỗ chơi được nào. Hình bàn và mẫu ngẫu nhiên thay đổi vị trí các lỗ."
+    ]
+  },
+  "source": "puzzles.but: pegs"
+}

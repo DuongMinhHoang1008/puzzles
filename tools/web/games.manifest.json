@@ -1,0 +1,458 @@
+[
+  {
+    "id": "blackbox",
+    "name": "Black Box",
+    "vi": "Hộp đen",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Find hidden balls by firing rays; their entry and exit reveal reflections and deflections.",
+      "vi": "Tìm các quả cầu ẩn bằng tia dò. Vị trí vào và ra cho biết tia bị phản xạ hoặc đổi hướng."
+    }
+  },
+  {
+    "id": "bridges",
+    "name": "Bridges",
+    "vi": "Nối cầu",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Join islands with one or two bridges. Each number is its bridge count; connect every island without crossing bridges.",
+      "vi": "Nối các đảo bằng một hoặc hai cầu. Số trên đảo là tổng cầu; mọi đảo phải liên thông, cầu không giao nhau."
+    }
+  },
+  {
+    "id": "cube",
+    "name": "Cube",
+    "vi": "Lăn khối",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Roll the cube over the board to transfer coloured squares until all six faces are coloured.",
+      "vi": "Lăn khối trên bàn để trao đổi màu giữa mặt khối và ô, đến khi cả sáu mặt đều có màu."
+    }
+  },
+  {
+    "id": "dominosa",
+    "name": "Dominosa",
+    "vi": "Ghép domino",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Partition the numbers into dominoes so each unordered pair appears exactly once.",
+      "vi": "Ghép các số thành domino sao cho mỗi cặp số không phân biệt thứ tự xuất hiện đúng một lần."
+    }
+  },
+  {
+    "id": "fifteen",
+    "name": "Fifteen",
+    "vi": "Trượt số",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Slide tiles into the empty space to arrange the numbers in reading order.",
+      "vi": "Trượt ô vào khoảng trống để xếp các số theo thứ tự từ trái sang phải, trên xuống dưới."
+    }
+  },
+  {
+    "id": "filling",
+    "name": "Filling",
+    "vi": "Điền vùng",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Fill connected regions with their size. Regions of the same number must not share an edge.",
+      "vi": "Điền mỗi vùng liên thông bằng số bằng diện tích của nó. Các vùng cùng số không được chung cạnh."
+    }
+  },
+  {
+    "id": "flip",
+    "name": "Flip",
+    "vi": "Lật ô",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Make every square light. A click flips that square and the neighbours shown by its pattern.",
+      "vi": "Làm sáng tất cả ô. Mỗi lần nhấn lật ô đó và các ô lân cận theo mẫu của ô."
+    }
+  },
+  {
+    "id": "flood",
+    "name": "Flood",
+    "vi": "Lan màu",
+    "category": "colors",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Change the colour of the top-left region to absorb neighbours and cover the board within the move limit.",
+      "vi": "Đổi màu vùng góc trên trái để hấp thụ các vùng kề và phủ toàn bàn trong giới hạn lượt."
+    }
+  },
+  {
+    "id": "galaxies",
+    "name": "Galaxies",
+    "vi": "Thiên hà",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Divide the board into connected regions, each rotationally symmetric around exactly one dot.",
+      "vi": "Chia bàn thành các vùng liên thông, mỗi vùng đối xứng quay quanh đúng một chấm."
+    }
+  },
+  {
+    "id": "guess",
+    "name": "Guess",
+    "vi": "Đoán mã",
+    "category": "colors",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Guess the hidden colour code. Feedback shows correct positions and colours in the wrong position.",
+      "vi": "Đoán mã màu ẩn. Phản hồi cho biết số màu đúng vị trí và đúng màu nhưng sai vị trí."
+    }
+  },
+  {
+    "id": "inertia",
+    "name": "Inertia",
+    "vi": "Quán tính",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Slide to collect every gem, avoiding mines. Motion continues until an obstacle stops you.",
+      "vi": "Trượt để thu mọi viên ngọc và tránh mìn. Bạn tiếp tục trượt đến khi gặp vật cản."
+    }
+  },
+  {
+    "id": "keen",
+    "name": "Keen",
+    "vi": "Lồng số",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Use every digit once in each row and column. Each cage must satisfy its labelled arithmetic operation.",
+      "vi": "Mỗi hàng và cột chứa mỗi chữ số đúng một lần. Mỗi lồng phải thỏa phép tính ghi trên nhãn."
+    }
+  },
+  {
+    "id": "lightup",
+    "name": "Light Up",
+    "vi": "Thắp sáng",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "custom",
+    "description": {
+      "en": "Place bulbs to illuminate every white square. Bulbs must not see each other; numbered black cells specify adjacent bulbs.",
+      "vi": "Đặt đèn để chiếu sáng mọi ô trắng. Hai đèn không được chiếu vào nhau; số trên ô đen là số đèn kề cạnh."
+    }
+  },
+  {
+    "id": "loopy",
+    "name": "Loopy",
+    "vi": "Vòng kín",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Draw one closed loop along edges. Each clue counts the loop edges around its cell.",
+      "vi": "Vẽ một vòng kín duy nhất theo các cạnh. Số trong ô là số cạnh của vòng quanh ô đó."
+    }
+  },
+  {
+    "id": "magnets",
+    "name": "Magnets",
+    "vi": "Nam châm",
+    "category": "colors",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Fill dominoes with opposite poles or leave them neutral. Equal poles cannot touch; edge clues count polarities.",
+      "vi": "Điền hai cực trái dấu vào domino hoặc để trung tính. Cực cùng dấu không được kề; số ngoài bàn đếm từng cực."
+    }
+  },
+  {
+    "id": "map",
+    "name": "Map",
+    "vi": "Tô bản đồ",
+    "category": "colors",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Colour every region with one of four colours so neighbouring regions differ.",
+      "vi": "Tô mỗi vùng bằng một trong bốn màu sao cho các vùng chung cạnh khác màu."
+    }
+  },
+  {
+    "id": "mines",
+    "name": "Mines",
+    "vi": "Dò mìn",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Reveal all safe cells. A number counts neighbouring mines; mark suspected mines with secondary input.",
+      "vi": "Mở mọi ô an toàn. Số đếm mìn trong các ô xung quanh; dùng thao tác phụ để đánh dấu mìn."
+    }
+  },
+  {
+    "id": "net",
+    "name": "Net",
+    "vi": "Nối mạng",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "custom",
+    "description": {
+      "en": "Rotate tiles to connect every terminal to the source. Middle input locks a tile.",
+      "vi": "Xoay ô để nối mọi đầu mạng với nguồn. Nút giữa khóa ô."
+    }
+  },
+  {
+    "id": "netslide",
+    "name": "Netslide",
+    "vi": "Trượt mạng",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Slide rows and columns to connect the entire network to its source.",
+      "vi": "Trượt hàng và cột để nối toàn bộ mạng với nguồn."
+    }
+  },
+  {
+    "id": "pattern",
+    "name": "Pattern",
+    "vi": "Ô hình",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Shade cells to match the run lengths beside every row and column. Separate runs by at least one empty cell.",
+      "vi": "Tô ô theo độ dài các đoạn ở mỗi hàng và cột. Hai đoạn phải cách nhau ít nhất một ô trống."
+    }
+  },
+  {
+    "id": "pearl",
+    "name": "Pearl",
+    "vi": "Ngọc trai",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Draw a single loop through all pearls. Turn at black pearls and go straight through the next cells; go straight at white pearls and turn next to them.",
+      "vi": "Vẽ một vòng qua mọi ngọc. Ngọc đen bắt buộc rẽ và hai ô kế tiếp đi thẳng; ngọc trắng đi thẳng và phải rẽ ở ít nhất một ô kề."
+    }
+  },
+  {
+    "id": "pegs",
+    "name": "Pegs",
+    "vi": "Nhảy chốt",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Jump a peg over an adjacent peg into a hole, removing the jumped peg. Finish with one peg.",
+      "vi": "Nhảy một chốt qua chốt kề vào ô trống, xóa chốt bị nhảy qua. Kết thúc với một chốt."
+    }
+  },
+  {
+    "id": "range",
+    "name": "Range",
+    "vi": "Tầm nhìn",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Shade cells so each numbered square sees exactly its number of white cells horizontally and vertically, including itself. Black cells cannot touch and white cells remain connected.",
+      "vi": "Tô đen để mỗi ô số nhìn thấy đúng số ô trắng theo hàng và cột, kể cả nó. Ô đen không kề cạnh; các ô trắng phải liên thông."
+    }
+  },
+  {
+    "id": "rect",
+    "name": "Rectangles",
+    "vi": "Hình chữ nhật",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Partition the board into rectangles, each containing one clue equal to its area.",
+      "vi": "Chia bàn thành các hình chữ nhật, mỗi hình chứa một số bằng diện tích của nó."
+    }
+  },
+  {
+    "id": "samegame",
+    "name": "Same Game",
+    "vi": "Cùng màu",
+    "category": "colors",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Remove connected groups of two or more equal-coloured tiles. Tiles fall and empty columns close up.",
+      "vi": "Xóa nhóm từ hai ô cùng màu kề nhau. Ô phía trên rơi xuống và cột trống được thu lại."
+    }
+  },
+  {
+    "id": "signpost",
+    "name": "Signpost",
+    "vi": "Biển chỉ đường",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Link squares in numbered order. Each arrow points toward the next square, possibly across several cells.",
+      "vi": "Nối ô theo thứ tự số. Mũi tên chỉ về ô tiếp theo, có thể cách nhiều ô."
+    }
+  },
+  {
+    "id": "singles",
+    "name": "Singles",
+    "vi": "Số độc nhất",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Black out repeated numbers so remaining rows and columns have no duplicates. Black cells cannot touch; white cells stay connected.",
+      "vi": "Tô đen số trùng để hàng và cột trắng không còn lặp. Ô đen không kề cạnh; ô trắng phải liên thông."
+    }
+  },
+  {
+    "id": "sixteen",
+    "name": "Sixteen",
+    "vi": "Xoay hàng",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Shift whole rows and columns cyclically until all numbered tiles are in order.",
+      "vi": "Dịch vòng cả hàng hoặc cột để xếp các ô số đúng thứ tự."
+    }
+  },
+  {
+    "id": "slant",
+    "name": "Slant",
+    "vi": "Đường chéo",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Put a diagonal in every square. Clues count touching diagonals; diagonals must not form loops.",
+      "vi": "Đặt một đường chéo trong mỗi ô. Số đếm đường chéo chạm vào điểm đó; không được tạo vòng kín."
+    }
+  },
+  {
+    "id": "solo",
+    "name": "Solo",
+    "vi": "Sudoku",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Fill every row, column and block with each digit exactly once. Secondary selection enters pencil marks.",
+      "vi": "Điền mỗi chữ số đúng một lần trong mỗi hàng, cột và khối. Chọn phụ để nhập ghi chú."
+    }
+  },
+  {
+    "id": "tents",
+    "name": "Tents",
+    "vi": "Lều trại",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Place one tent beside each tree. Tents cannot touch, even diagonally; row and column counts must match.",
+      "vi": "Đặt một lều kề cạnh mỗi cây. Các lều không được chạm nhau kể cả chéo; tổng hàng và cột phải khớp."
+    }
+  },
+  {
+    "id": "towers",
+    "name": "Towers",
+    "vi": "Tháp số",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Use every height once per row and column. Edge clues count visible towers; taller towers hide shorter ones.",
+      "vi": "Mỗi hàng và cột có mỗi độ cao một lần. Số ngoài bàn đếm tháp nhìn thấy; tháp cao che tháp thấp."
+    }
+  },
+  {
+    "id": "tracks",
+    "name": "Tracks",
+    "vi": "Đường tàu",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Draw a continuous track from A to B through the given pieces. Edge clues count occupied cells in each row and column.",
+      "vi": "Vẽ đường tàu liên tục từ A tới B qua các đoạn đã cho. Số ngoài bàn đếm ô có đường trong mỗi hàng và cột."
+    }
+  },
+  {
+    "id": "twiddle",
+    "name": "Twiddle",
+    "vi": "Xoay nhóm",
+    "category": "movement",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Rotate small blocks to put every tile in numerical order. Secondary input rotates the other way.",
+      "vi": "Xoay từng khối nhỏ để xếp ô theo thứ tự số. Thao tác phụ xoay theo chiều ngược lại."
+    }
+  },
+  {
+    "id": "undead",
+    "name": "Undead",
+    "vi": "Quái vật",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Place ghosts, vampires and zombies. Sight lines reflect in mirrors; clues count visible monsters and totals specify each kind.",
+      "vi": "Đặt ma, ma cà rồng và thây ma. Tầm nhìn phản xạ qua gương; số đếm quái vật nhìn thấy và tổng quy định từng loại."
+    }
+  },
+  {
+    "id": "unequal",
+    "name": "Unequal",
+    "vi": "Bất đẳng thức",
+    "category": "numbers",
+    "input": "keypad",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Use each digit once per row and column while satisfying every inequality between adjacent cells.",
+      "vi": "Mỗi hàng và cột có mỗi chữ số đúng một lần, đồng thời thỏa mọi bất đẳng thức giữa các ô kề."
+    }
+  },
+  {
+    "id": "unruly",
+    "name": "Unruly",
+    "vi": "Nhị phân",
+    "category": "regions",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Fill rows and columns with equal numbers of black and white cells. Never put three identical cells consecutively; unique mode also forbids duplicate rows and columns.",
+      "vi": "Điền số ô đen và trắng bằng nhau trong mỗi hàng và cột. Không có ba ô cùng màu liên tiếp; chế độ duy nhất còn cấm hàng hoặc cột trùng."
+    }
+  },
+  {
+    "id": "untangle",
+    "name": "Untangle",
+    "vi": "Gỡ rối",
+    "category": "lines",
+    "input": "pointer",
+    "polish": "native-integrated",
+    "description": {
+      "en": "Drag the vertices until no two edges cross.",
+      "vi": "Kéo các đỉnh để không có hai cạnh giao nhau."
+    }
+  }
+]

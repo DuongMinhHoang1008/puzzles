@@ -1,0 +1,49 @@
+{
+  "buildId": "77a109f2a657739e",
+  "samples": [
+    {
+      "switches": 0,
+      "seen": 3,
+      "retained": 0,
+      "listeners": {
+        "window": 24,
+        "document": 8
+      },
+      "usedSize": 2894812,
+      "totalSize": 4005888
+    },
+    {
+      "switches": 10,
+      "seen": 13,
+      "retained": 0,
+      "listeners": {
+        "window": 24,
+        "document": 8
+      },
+      "usedSize": 3209620,
+      "totalSize": 4005888
+    },
+    {
+      "switches": 20,
+      "seen": 23,
+      "retained": 0,
+      "listeners": {
+        "window": 24,
+        "document": 8
+      },
+      "usedSize": 3320508,
+      "totalSize": 4268032
+    },
+    {
+      "switches": 30,
+      "seen": 33,
+      "retained": 0,
+      "listeners": {
+        "window": 24,
+        "document": 8
+      },
+      "usedSize": 3405924,
+      "totalSize": 4268032
+    }
+  ]
+}

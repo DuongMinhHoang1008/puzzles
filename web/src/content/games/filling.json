@@ -1,0 +1,22 @@
+{
+  "name": "Filling",
+  "en": {
+    "goal": "Fill connected regions with their size. Regions of the same number must not share an edge.",
+    "input": "Click an empty region to fill it with that region's number. Right click (Secondary) marks a region as not this number. All regions must be filled with their correct number.",
+    "rules": [
+      "A region connects equal digits through shared edges. Diagonal contact does not join regions.",
+      "A region containing digit n must have exactly n squares. Zero is never valid; this engine uses regions of size at most nine.",
+      "Given digits cannot be changed. Equal neighbouring regions merge, so two separate regions of the same digit cannot share an edge."
+    ]
+  },
+  "vi": {
+    "goal": "Điền mỗi vùng liên thông bằng số bằng diện tích của nó. Các vùng cùng số không được chung cạnh.",
+    "input": "Nhấn vùng trống để điền số của vùng đó. Nhấn phải (Thao tác phụ) đánh dấu vùng không phải số đó. Mọi vùng phải được điền đúng số.",
+    "rules": [
+      "Vùng nối các ô cùng số qua cạnh chung. Tiếp xúc chéo không nối vùng.",
+      "Vùng mang số n phải có đúng n ô. Số 0 không hợp lệ; engine này dùng vùng lớn nhất là 9 ô.",
+      "Không được đổi số đã cho. Hai vùng cùng số kề cạnh sẽ nhập lại, nên các vùng riêng cùng số không được chung cạnh."
+    ]
+  },
+  "source": "puzzles.but: filling"
+}

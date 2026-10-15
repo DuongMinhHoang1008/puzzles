@@ -1,0 +1,22 @@
+{
+  "name": "Cube",
+  "en": {
+    "goal": "Roll the cube over the board to transfer coloured squares until all six faces are coloured.",
+    "input": "Click adjacent to the cube to roll it in that direction. Each roll transfers the top face colour to the landed square and vice versa. Arrow keys also move the cube.",
+    "rules": [
+      "Rolling exchanges the colours of the touching board square and solid face; blue can be picked up and put down again.",
+      "Win by colouring every face of the solid simultaneously. The move count is a score to improve, not a time limit.",
+      "Cube uses a square grid. Tetrahedron, Octahedron and Icosahedron presets use triangular grids and different rolling directions."
+    ]
+  },
+  "vi": {
+    "goal": "Lăn khối trên bàn để trao đổi màu giữa mặt khối và ô, đến khi cả sáu mặt đều có màu.",
+    "input": "Nhấn kề khối để lăn nó theo hướng đó. Mỗi lần lăn, màu mặt trên chuyển xuống ô và màu ô chuyển lên mặt trên. Phím mũi tên cũng di chuyển khối.",
+    "rules": [
+      "Mỗi lần lăn trao đổi màu giữa ô bàn và mặt khối tiếp xúc; màu xanh có thể được lấy lên hoặc đặt xuống lại.",
+      "Thắng khi tất cả mặt khối cùng có màu. Tổng lượt là điểm để cải thiện, không phải giới hạn thời gian.",
+      "Lập phương dùng lưới vuông. Các mẫu tứ diện, bát diện và nhị thập diện dùng lưới tam giác và hướng lăn khác."
+    ]
+  },
+  "source": "puzzles.but: cube"
+}

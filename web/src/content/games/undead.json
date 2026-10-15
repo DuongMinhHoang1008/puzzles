@@ -1,0 +1,22 @@
+{
+  "name": "Undead",
+  "en": {
+    "goal": "Place ghosts, vampires and zombies. Sight lines reflect in mirrors; clues count visible monsters and totals specify each kind.",
+    "input": "Select a cell and enter G (ghost), V (vampire), or Z (zombie). Space clears it. Right click (Secondary) selects pencil marks; enter the same letter again to remove a mark. Arrow keys select cells, Enter switches pencil mode. A toggles monster pictures and letters.",
+    "rules": [
+      "Fill every non-mirror cell with G, V or Z and match the total number of each monster type.",
+      "Vampires are visible directly but not through reflections. Ghosts are visible only after reflection. Zombies are visible either way.",
+      "Mirrors reflect on both sides. Edge clues count visible encounters along the reflected sight line; the same monster can be counted again if the line revisits it."
+    ]
+  },
+  "vi": {
+    "goal": "Đặt ma, ma cà rồng và thây ma. Tầm nhìn phản xạ qua gương; số đếm quái vật nhìn thấy và tổng quy định từng loại.",
+    "input": "Chọn ô rồi nhập G (ma), V (ma cà rồng) hoặc Z (thây ma). Space xóa ô. Chuột phải (Thao tác phụ) chọn ghi chú; nhập lại cùng chữ để xóa ghi chú. Mũi tên chọn ô, Enter đổi chế độ ghi chú. A đổi giữa hình quái vật và chữ.",
+    "rules": [
+      "Điền G, V hoặc Z vào mọi ô không có gương và thỏa tổng số của từng loại quái vật.",
+      "Ma cà rồng chỉ thấy trực tiếp, không thấy qua phản xạ. Ma chỉ thấy sau phản xạ. Thây ma thấy được theo cả hai cách.",
+      "Gương phản xạ ở cả hai mặt. Số ngoài cạnh đếm từng lần gặp quái vật nhìn thấy trên đường phản xạ; cùng một quái vật có thể được đếm lại nếu đường nhìn quay qua nó."
+    ]
+  },
+  "source": "puzzles.but: undead"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Signpost",
+  "en": {
+    "goal": "Link squares in numbered order. Each arrow points toward the next square, possibly across several cells.",
+    "input": "Select a cell, then type a digit. Right-click for pencil or alternate selection. Use Backspace to clear and arrow keys to navigate.",
+    "rules": [
+      "Link all cells into a single sequence from 1 to the number of cells, preserving the numbered clues.",
+      "Each arrow points toward the next cell in the sequence. That cell may be any distance away along the arrow’s line.",
+      "Linked groups may temporarily show letter-based relative numbers until attached to a known number. No cell may have two successors or two predecessors."
+    ]
+  },
+  "vi": {
+    "goal": "Nối ô theo thứ tự số. Mũi tên chỉ về ô tiếp theo, có thể cách nhiều ô.",
+    "input": "Chọn ô rồi nhập số. Nhấn chuột phải để chọn ghi chú hoặc thao tác phụ. Backspace để xóa, phím mũi tên để di chuyển.",
+    "rules": [
+      "Nối mọi ô thành một chuỗi từ 1 đến tổng số ô, giữ các số đã cho.",
+      "Mũi tên mỗi ô chỉ về ô tiếp theo trong chuỗi. Ô đó có thể cách bất kỳ số ô nào trên đường thẳng của mũi tên.",
+      "Nhóm nối tạm có thể hiện số tương đối theo chữ đến khi gắn với số đã biết. Mỗi ô không được có hai ô kế hoặc hai ô trước."
+    ]
+  },
+  "source": "puzzles.but: signpost"
+}

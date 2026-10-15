@@ -1,0 +1,22 @@
+{
+  "name": "Galaxies",
+  "en": {
+    "goal": "Divide the board into connected regions, each rotationally symmetric around exactly one dot.",
+    "input": "Click and drag from a dot to draw a region boundary. The region must be rotationally symmetric around that dot. Right click (Secondary) erases a boundary. Every cell must belong to exactly one region.",
+    "rules": [
+      "Every square belongs to one region, and each region contains exactly one dot, its centre.",
+      "Each region is connected by shared edges and looks identical after a half-turn around its dot.",
+      "Dots may lie inside a square, on an edge, or at a corner. Region boundaries must respect the indicated centre, not merely make a mirror symmetry."
+    ]
+  },
+  "vi": {
+    "goal": "Chia bàn thành các vùng liên thông, mỗi vùng đối xứng quay quanh đúng một chấm.",
+    "input": "Nhấn và kéo từ một chấm để vẽ ranh giới vùng. Vùng phải đối xứng quay quanh chấm đó. Nhấn phải (Thao tác phụ) xóa ranh giới. Mọi ô phải thuộc đúng một vùng.",
+    "rules": [
+      "Mỗi ô thuộc một vùng, mỗi vùng chứa đúng một chấm làm tâm.",
+      "Mỗi vùng liên thông qua cạnh và giữ nguyên hình khi quay nửa vòng quanh chấm tâm.",
+      "Chấm có thể nằm trong ô, trên cạnh hoặc tại góc. Biên vùng phải theo đúng tâm quay; đối xứng gương đơn thuần chưa đủ."
+    ]
+  },
+  "source": "puzzles.but: galaxies"
+}

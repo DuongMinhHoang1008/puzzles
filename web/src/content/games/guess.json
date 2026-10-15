@@ -1,0 +1,22 @@
+{
+  "name": "Guess",
+  "en": {
+    "goal": "Guess the hidden colour code. Feedback shows correct positions and colours in the wrong position.",
+    "input": "Click a colour button to place that colour in the current slot. Submit your guess with the check button. Feedback shows black pegs for correct position and white pegs for correct colour but wrong position.",
+    "rules": [
+      "Reproduce the hidden ordered colour sequence before the available rows run out. Complete a row and submit it for feedback.",
+      "Black feedback pegs count correct colours in correct positions. White pegs count correct colours in different positions; feedback order does not identify individual pegs.",
+      "Custom settings control whether duplicates and blanks are allowed, plus colours, pegs per row and guesses. Apply those settings when reasoning about the code."
+    ]
+  },
+  "vi": {
+    "goal": "Đoán mã màu ẩn. Phản hồi cho biết số màu đúng vị trí và đúng màu nhưng sai vị trí.",
+    "input": "Nhấn nút màu để đặt màu đó vào ô hiện tại. Nhấn nút kiểm tra để gửi. Phản hồi hiển thị chốt đen cho đúng vị trí và chốt trắng cho đúng màu nhưng sai vị trí.",
+    "rules": [
+      "Tái tạo đúng thứ tự mã màu trước khi hết các hàng đoán. Điền đủ một hàng rồi gửi để nhận phản hồi.",
+      "Chốt phản hồi đen đếm màu đúng vị trí. Chốt trắng đếm màu đúng nhưng sai vị trí; thứ tự phản hồi không xác định riêng từng chốt.",
+      "Cấu hình quy định có cho trùng màu, ô trống, số màu, số chốt mỗi hàng và số lần đoán hay không. Suy luận mã theo đúng các cài đặt này."
+    ]
+  },
+  "source": "puzzles.but: guess"
+}

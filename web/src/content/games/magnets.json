@@ -1,0 +1,22 @@
+{
+  "name": "Magnets",
+  "en": {
+    "goal": "Fill dominoes with opposite poles or leave them neutral. Equal poles cannot touch; edge clues count polarities.",
+    "input": "Click a half-domino to place a polarity (+/-). Right click (Secondary) clears it. Opposite poles must be placed in adjacent halves; same poles cannot touch edge-to-edge. Edge clues count positive and negative poles in each row and column.",
+    "rules": [
+      "Each outlined domino is either a magnet with one + and one − pole, or two neutral cells. Do not mix one neutral cell with one pole.",
+      "Equal positive or equal negative poles cannot share an edge. Neutral cells may touch anything; diagonal contact is allowed.",
+      "Each printed row/column clue counts one specified polarity. A missing clue imposes no count for that polarity in that line."
+    ]
+  },
+  "vi": {
+    "goal": "Điền hai cực trái dấu vào domino hoặc để trung tính. Cực cùng dấu không được kề; số ngoài bàn đếm từng cực.",
+    "input": "Nhấn nửa domino để đặt cực (+/-). Nhấn phải (Thao tác phụ) xóa nó. Cực trái dấu phải ở hai nửa kề nhau; cực cùng dấu không được kề cạnh. Số ngoài bàn đếm cực dương và âm trong mỗi hàng và cột.",
+    "rules": [
+      "Mỗi domino viền là nam châm có một cực + và một cực −, hoặc hai ô trung tính. Không trộn một ô trung tính với một cực.",
+      "Hai cực dương hoặc hai cực âm không được chung cạnh. Ô trung tính kề được mọi ô; tiếp xúc chéo được phép.",
+      "Mỗi số gợi ý hàng/cột đếm một cực được chỉ định. Không có gợi ý thì hàng/cột đó không bị ràng buộc số lượng cực tương ứng."
+    ]
+  },
+  "source": "puzzles.but: magnets"
+}

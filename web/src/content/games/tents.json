@@ -1,0 +1,22 @@
+{
+  "name": "Tents",
+  "en": {
+    "goal": "Place one tent beside each tree. Tents cannot touch, even diagonally; row and column counts must match.",
+    "input": "Click an empty square next to a tree to place a tent. Right click (Secondary) removes a tent. Each tree must have exactly one adjacent tent; tents cannot touch each other, even diagonally. Row and column counts must match the clues.",
+    "rules": [
+      "There must be as many tents as trees, with a one-to-one matching between tents and edge-adjacent trees.",
+      "A tent may touch more than one tree, but is assigned to only one. No two tents may touch by edge or corner.",
+      "Every row and column must have the printed number of tents. Grass marks rule out cells but do not replace tent/tree matching."
+    ]
+  },
+  "vi": {
+    "goal": "Đặt một lều kề cạnh mỗi cây. Các lều không được chạm nhau kể cả chéo; tổng hàng và cột phải khớp.",
+    "input": "Nhấn ô trống kề cây để đặt lều. Nhấn phải (Thao tác phụ) bỏ lều. Mỗi cây phải có đúng một lều kề; lều không được chạm nhau kể cả chéo. Tổng hàng và cột phải khớp số.",
+    "rules": [
+      "Số lều phải bằng số cây, và có cách ghép một-một giữa mỗi lều với một cây kề cạnh.",
+      "Lều có thể kề nhiều cây nhưng chỉ ghép với một cây. Hai lều không được chạm nhau theo cạnh hoặc góc.",
+      "Mỗi hàng và cột phải có đúng số lều ghi ngoài bàn. Dấu cỏ loại ô nhưng không thay yêu cầu ghép lều-cây."
+    ]
+  },
+  "source": "puzzles.but: tents"
+}

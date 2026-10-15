@@ -1,0 +1,22 @@
+{
+  "name": "Unruly",
+  "en": {
+    "goal": "Fill rows and columns with equal numbers of black and white cells. Never put three identical cells consecutively; unique mode also forbids duplicate rows and columns.",
+    "input": "Left click a cell to toggle between black and white. Right click (Secondary) cycles through blank first. Each row and column must have equal numbers of black and white cells, and no three consecutive cells of the same colour are allowed.",
+    "rules": [
+      "Complete every cell as black or white and preserve the given clues. Grey means undecided, not a third allowed colour.",
+      "Each row and column needs equal numbers of black and white cells and cannot contain three identical colours consecutively.",
+      "When Unique rows and columns is enabled, no two complete rows may match and no two complete columns may match."
+    ]
+  },
+  "vi": {
+    "goal": "Điền số ô đen và trắng bằng nhau trong mỗi hàng và cột. Không có ba ô cùng màu liên tiếp; chế độ duy nhất còn cấm hàng hoặc cột trùng.",
+    "input": "Nhấn trái ô để chuyển giữa đen và trắng. Nhấn phải (Thao tác phụ) quay qua trạng thái trống trước. Mỗi hàng và cột phải có số ô đen và trắng bằng nhau, và không được có ba ô cùng màu liên tiếp.",
+    "rules": [
+      "Điền mọi ô đen hoặc trắng và giữ ô đã cho. Xám là chưa quyết định, không phải màu thứ ba được phép.",
+      "Mỗi hàng và cột cần số ô đen và trắng bằng nhau, không được có ba ô cùng màu liên tiếp.",
+      "Khi bật hàng và cột duy nhất, không có hai hàng hoàn chỉnh giống nhau và không có hai cột hoàn chỉnh giống nhau."
+    ]
+  },
+  "source": "puzzles.but: unruly"
+}

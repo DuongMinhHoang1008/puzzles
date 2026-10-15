@@ -51,6 +51,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 #include "puzzles.h"
 
@@ -133,6 +134,7 @@ void fatal(char *fmt, ...)
     va_end(ap);
 
     js_error_box(buf);
+    abort();
 }
 
 void debug_printf(char *fmt, ...)
@@ -159,14 +161,32 @@ int strnullcmp(const char *a, const char *b)
 /*
  * HTMLish names for the colours allocated by the puzzle.
  */
+midend *me;
 char **colour_strings;
 int ncolours;
+static void refresh_palette(void)
+{
+    float *colours;
+    int i;
+    for (i = 0; i < ncolours; i++) sfree(colour_strings[i]);
+    sfree(colour_strings);
+    colours = midend_colours(me, &ncolours);
+    colour_strings = snewn(ncolours, char *);
+    for (i = 0; i < ncolours; i++) {
+        char col[40];
+        sprintf(col, "%d:#%02x%02x%02x", i,
+            (unsigned)(0.5 + 255 * colours[i*3]),
+            (unsigned)(0.5 + 255 * colours[i*3+1]),
+            (unsigned)(0.5 + 255 * colours[i*3+2]));
+        colour_strings[i] = dupstr(col);
+    }
+    sfree(colours);
+}
+
 
 /*
  * The global midend object.
  */
-midend *me;
-
 /* ----------------------------------------------------------------------
  * Timing functions.
  */
@@ -201,6 +221,7 @@ static void resize(void)
     int w, h;
     w = h = INT_MAX;
     midend_size(me, &w, &h, FALSE);
+    refresh_palette();
     js_canvas_set_size(w, h);
     canvas_w = w;
     canvas_h = h;
@@ -638,6 +659,7 @@ static void cfg_end(int use_results)
             resize();
             midend_redraw(me);
             free_cfg(cfg);
+            cfg = NULL;
             js_dialog_cleanup();
         }
     } else {
@@ -657,6 +679,7 @@ static void cfg_end(int use_results)
         select_appropriate_preset();
 
         free_cfg(cfg);
+        cfg = NULL;
         js_dialog_cleanup();
     }
 }
@@ -751,7 +774,6 @@ void command(int n)
 int main(int argc, char **argv)
 {
     char *param_err;
-    float *colours;
     int i;
 
     /*
@@ -825,17 +847,6 @@ int main(int argc, char **argv)
      * Retrieve the game's colours, and convert them into #abcdef type
      * hex ID strings.
      */
-    colours = midend_colours(me, &ncolours);
-    colour_strings = snewn(ncolours, char *);
-    for (i = 0; i < ncolours; i++) {
-        char col[40];
-        sprintf(col, "#%02x%02x%02x",
-                (unsigned)(0.5 + 255 * colours[i*3+0]),
-                (unsigned)(0.5 + 255 * colours[i*3+1]),
-                (unsigned)(0.5 + 255 * colours[i*3+2]));
-        colour_strings[i] = dupstr(col);
-    }
-
     /*
      * Request notification when the game ids change (e.g. if the user
      * presses 'n', and also when Mines supersedes its game
@@ -864,4 +875,64 @@ int main(int argc, char **argv)
      * Done. Return to JS, and await callbacks!
      */
     return 0;
+}
+
+/* Web API: returned buffers are owned by C until web_free / next save. */
+static unsigned char *save_bytes;
+static int save_length;
+static void save_write(void *ctx, void *buf, int len) {
+    if (len <= 0 || save_length > INT_MAX - len) fatal("Save too large");
+    save_bytes = sresize(save_bytes, save_length + len, unsigned char);
+    memcpy(save_bytes + save_length, buf, len);
+    save_length += len;
+}
+typedef struct { const unsigned char *data; int size, pos; } web_reader;
+static int save_read(void *ctx, void *buf, int len) {
+    web_reader *r = ctx;
+    if (len < 0 || len > r->size - r->pos) return FALSE;
+    memcpy(buf, r->data + r->pos, len); r->pos += len; return TRUE;
+}
+unsigned char *web_save(void) {
+    sfree(save_bytes); save_bytes = NULL; save_length = 0;
+    midend_serialise(me, save_write, NULL); return save_bytes;
+}
+int web_save_length(void) { return save_length; }
+const char *web_restore(const unsigned char *data, int size) {
+    web_reader r = { data, size, 0 };
+    char *err;
+    if (size <= 0 || size > 16777216) return "Invalid save size";
+    midend_stop_anim(me);
+    err = midend_deserialise(me, save_read, &r);
+    if (!err) {
+        resize(); midend_force_redraw(me); update_permalinks();
+        update_undo_redo(); select_appropriate_preset();
+    }
+    return err;
+}
+const char *web_game_id(char *id) {
+    char *err = midend_game_id(me, id);
+    if (!err) { midend_new_game(me); resize(); midend_force_redraw(me);
+        update_permalinks(); update_undo_redo(); select_appropriate_preset(); }
+    return err;
+}
+int web_status(void) { return midend_status(me); }
+int web_cause(void) { return midend_web_cause(me); }
+unsigned web_revision(void) { return midend_web_revision(me); }
+unsigned web_ui_revision(void) { return midend_web_ui_revision(me); }
+int web_assisted(void) { return midend_web_assisted(me); }
+int web_can_solve(void) { return thegame.can_solve; }
+int web_can_configure(void) { return thegame.can_configure; }
+void web_stop_anim(void) { midend_stop_anim(me); midend_force_redraw(me); }
+void web_redraw(void) { midend_force_redraw(me); }
+void web_dispose(void) {
+    int i;
+    if (!me) return;
+    deactivate_timer(NULL);
+    midend_stop_anim(me);
+    if (cfg) { free_cfg(cfg); cfg = NULL; }
+    midend_free(me); me = NULL;
+    sfree(presets); presets = NULL; npresets = 0;
+    for (i = 0; i < ncolours; i++) sfree(colour_strings[i]);
+    sfree(colour_strings); colour_strings = NULL; ncolours = 0;
+    sfree(save_bytes); save_bytes = NULL; save_length = 0;
 }

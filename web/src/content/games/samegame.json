@@ -1,0 +1,22 @@
+{
+  "name": "Same Game",
+  "en": {
+    "goal": "Remove connected groups of two or more equal-coloured tiles. Tiles fall and empty columns close up.",
+    "input": "Click a connected group of at least two equal-coloured tiles to select it, then click it again to remove it. Tiles fall and empty columns close up. Larger groups score more points.",
+    "rules": [
+      "Remove orthogonally connected groups of at least two equal-coloured tiles. A single isolated tile cannot be removed.",
+      "Tiles above a removed group fall down, and empty columns close sideways. Re-evaluate groups after each move.",
+      "The scoring preset chooses a group-size formula. Clear the board if possible; a position with tiles but no removable group is finished without clearing it."
+    ]
+  },
+  "vi": {
+    "goal": "Xóa nhóm từ hai ô cùng màu kề nhau. Ô phía trên rơi xuống và cột trống được thu lại.",
+    "input": "Nhấn nhóm từ hai ô cùng màu kề cạnh để chọn, rồi nhấn lại để xóa. Ô phía trên rơi xuống và cột trống được thu lại. Nhóm lớn được nhiều điểm hơn.",
+    "rules": [
+      "Xóa nhóm từ hai ô cùng màu nối qua cạnh. Không thể xóa một ô đơn lẻ.",
+      "Ô phía trên nhóm bị xóa rơi xuống, cột trống được thu ngang. Xét lại các nhóm sau mỗi lượt.",
+      "Mẫu điểm chọn công thức theo kích thước nhóm. Cố gắng xóa toàn bàn; bàn còn ô nhưng không còn nhóm xóa được sẽ kết thúc mà chưa được dọn hết."
+    ]
+  },
+  "source": "puzzles.but: samegame"
+}

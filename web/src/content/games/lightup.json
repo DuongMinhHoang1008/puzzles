@@ -1,0 +1,22 @@
+{
+  "name": "Light Up",
+  "en": {
+    "goal": "Place bulbs to illuminate every white square. Bulbs must not see each other; numbered black cells specify adjacent bulbs.",
+    "input": "Left click a white square to place or remove a bulb. Right click (Secondary) marks a square as unavailable for a bulb. A marked square cannot contain a bulb. The engine marks bulbs that illuminate each other and impossible numbered clues in red.",
+    "rules": [
+      "Bulbs illuminate their own white cell and straight rows and columns until blocked by a black cell or the board edge. Every white cell must be lit.",
+      "No bulb may illuminate another bulb. A numbered black cell requires exactly that many bulbs on its four neighbouring edges; unnumbered black cells impose no count.",
+      "Marking records where you do not want a bulb; marked cells still need light from elsewhere. Red cues indicate actual bulb overlaps or numbered-clue contradictions."
+    ]
+  },
+  "vi": {
+    "goal": "Đặt đèn để chiếu sáng mọi ô trắng. Hai đèn không được chiếu vào nhau; số trên ô đen là số đèn kề cạnh.",
+    "input": "Nhấn trái vào ô trắng để đặt hoặc bỏ đèn. Nhấn phải (Thao tác phụ) đánh dấu ô không đặt đèn. Ô đã đánh dấu không được chứa đèn. Engine tô đỏ các đèn chiếu vào nhau và các ô số không thể thỏa điều kiện.",
+    "rules": [
+      "Đèn chiếu sáng ô trắng của nó và các đường thẳng theo hàng, cột đến khi gặp ô đen hoặc mép bàn. Mọi ô trắng phải được sáng.",
+      "Không đèn nào được chiếu vào đèn khác. Ô đen có số yêu cầu đúng số đèn đó ở bốn ô kề cạnh; ô đen không số không ràng buộc số lượng.",
+      "Đánh dấu ghi nơi không đặt đèn; ô đã đánh dấu vẫn cần được đèn khác chiếu sáng. Dấu đỏ báo đèn chiếu nhau hoặc mâu thuẫn ở ô số."
+    ]
+  },
+  "source": "puzzles.but: lightup"
+}

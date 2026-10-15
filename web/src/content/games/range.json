@@ -1,0 +1,22 @@
+{
+  "name": "Range",
+  "en": {
+    "goal": "Shade cells so each numbered square sees exactly its number of white cells horizontally and vertically, including itself. Black cells cannot touch and white cells remain connected.",
+    "input": "Left click a cell to toggle between white and black. Right click (Secondary) marks a cell as definitely not black. Each numbered cell must see exactly its number of white cells including itself. White cells must form one connected region.",
+    "rules": [
+      "Numbered cells must remain white. A number counts the visible white cells in four straight directions, plus the numbered cell once.",
+      "The board edge or a black cell stops a sight line. Two black cells cannot share an edge, though diagonals are allowed.",
+      "All white cells must be connected through shared edges. Satisfying the visible counts without white connectivity is insufficient."
+    ]
+  },
+  "vi": {
+    "goal": "Tô đen để mỗi ô số nhìn thấy đúng số ô trắng theo hàng và cột, kể cả nó. Ô đen không kề cạnh; các ô trắng phải liên thông.",
+    "input": "Nhấn trái ô để chuyển giữa trắng và đen. Nhấn phải (Thao tác phụ) đánh dấu ô chắc chắn không đen. Mỗi ô số phải nhìn thấy đúng số ô trắng kể cả nó. Các ô trắng phải tạo thành một vùng liên thông.",
+    "rules": [
+      "Ô có số phải trắng. Số đếm ô trắng nhìn thấy theo bốn hướng thẳng, cộng chính ô số một lần.",
+      "Mép bàn hoặc ô đen chặn tầm nhìn. Hai ô đen không được chung cạnh nhưng có thể kề chéo.",
+      "Mọi ô trắng phải liên thông qua cạnh. Chỉ thỏa số ô nhìn thấy mà không liên thông trắng vẫn chưa đủ."
+    ]
+  },
+  "source": "puzzles.but: range"
+}

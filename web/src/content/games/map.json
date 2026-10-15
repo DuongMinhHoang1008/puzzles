@@ -1,0 +1,22 @@
+{
+  "name": "Map",
+  "en": {
+    "goal": "Colour every region with one of four colours so neighbouring regions differ.",
+    "input": "Drag from a coloured region into a blank region to copy its colour. Right-drag (Secondary on touch) adds or removes a candidate colour. Drag from a blank region to erase a colour. Press L to toggle colour numbers.",
+    "rules": [
+      "Colour every region using one of the four available colours. Preserve the given regions’ colours.",
+      "Regions sharing a border segment must differ. Regions touching only at a point may have the same colour.",
+      "Right-dragging a colour into a blank region toggles a pencil mark. With the keyboard, use arrows and Enter to pick up a colour, move to the target, then Enter to drop it."
+    ]
+  },
+  "vi": {
+    "goal": "Tô mỗi vùng bằng một trong bốn màu sao cho các vùng chung cạnh khác màu.",
+    "input": "Kéo từ vùng đã tô sang vùng trống để sao chép màu. Kéo bằng nút phải (Thao tác phụ trên cảm ứng) để thêm hoặc xóa màu ứng viên. Kéo từ vùng trống để xóa màu. Nhấn L để bật/tắt số màu.",
+    "rules": [
+      "Tô mọi vùng bằng một trong bốn màu có sẵn. Giữ nguyên màu của vùng đã cho.",
+      "Vùng chung một đoạn cạnh phải khác màu. Vùng chỉ tiếp xúc tại một điểm có thể cùng màu.",
+      "Kéo màu bằng nút phải vào vùng trống để bật/tắt ghi chú ứng viên. Với bàn phím, dùng mũi tên và Enter để lấy màu, di chuyển đến vùng đích rồi nhấn Enter để thả."
+    ]
+  },
+  "source": "puzzles.but: map"
+}
