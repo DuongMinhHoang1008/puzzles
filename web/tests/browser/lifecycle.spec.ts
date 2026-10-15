@@ -52,6 +52,7 @@ test("30 game changes release WASM memories and owned listeners", async ({
   test.setTimeout(90000);
   const cdp = await context.newCDPSession(page);
   const games = ["net", "solo", "lightup"];
+  const names: Record<string, string> = { net: "Net", solo: "Solo", lightup: "Light Up" };
   await page.addInitScript(() => {
     const refs: WeakRef<WebAssembly.Memory>[] = [];
     const capture = (
@@ -85,6 +86,7 @@ test("30 game changes release WASM memories and owned listeners", async ({
   for (const id of games) {
     await page.goto(`./#/play/${id}`);
     await expect(page.locator(".board-wrap > canvas")).toBeVisible();
+    await expect(page.locator(".board-wrap > canvas")).toHaveAttribute("aria-label", names[id]);
     if (id === "net") {
       const box = (await page.locator(".board-wrap > canvas").boundingBox())!;
       await page
@@ -100,6 +102,7 @@ test("30 game changes release WASM memories and owned listeners", async ({
   for (let i = 0; i < 30; i++) {
     await page.goto(`./#/play/${games[i % 3]}`);
     await expect(page.locator(".board-wrap > canvas")).toBeVisible();
+    await expect(page.locator(".board-wrap > canvas")).toHaveAttribute("aria-label", names[games[i % 3]]);
     if (i % 3 === 0) {
       const b = (await page.locator(".board-wrap > canvas").boundingBox())!;
       await page
